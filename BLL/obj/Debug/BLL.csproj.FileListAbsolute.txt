@@ -1,0 +1,11 @@
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\bin\Debug\BLL.dll
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\bin\Debug\BLL.pdb
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\bin\Debug\DAO.dll
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\bin\Debug\DTO.dll
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\bin\Debug\DAO.pdb
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\bin\Debug\DTO.pdb
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\obj\Debug\BLL.dll
+D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\BLL\obj\Debug\BLL.pdb
