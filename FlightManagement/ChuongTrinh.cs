@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FlightManagement
 {
-    public partial class Form1 : Form
+    public partial class ChuongTrinh : Form
     {
-        public Form1()
+        public ChuongTrinh()
         {
             InitializeComponent();
         }

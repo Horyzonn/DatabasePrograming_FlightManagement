@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,5 +18,11 @@ namespace DTO
         public string UserRole { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public UserDto(string Username,string Password)
+        {
+            this.Username = Username;
+            this.Password = Password;
+        }
     }
 }

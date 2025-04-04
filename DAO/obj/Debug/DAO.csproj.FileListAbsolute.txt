@@ -7,3 +7,12 @@ D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\DAO\obj\Debug\DAO.csproj.Co
 D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\DAO\obj\Debug\DAO.csproj.Up2Date
 D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\DAO\obj\Debug\DAO.dll
 D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\DAO\obj\Debug\DAO.pdb
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\bin\Debug\DAO.dll
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\bin\Debug\DAO.pdb
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\bin\Debug\DTO.dll
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\bin\Debug\DTO.pdb
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.dll
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.pdb
