@@ -31,18 +31,18 @@ namespace FlightManagement
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtPassWord = new System.Windows.Forms.TextBox();
             this.lblPassWord = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,36 +58,38 @@ namespace FlightManagement
             this.panel1.Size = new System.Drawing.Size(798, 730);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.Controls.Add(this.txtUserName);
-            this.panel2.Controls.Add(this.lblUserName);
-            this.panel2.Location = new System.Drawing.Point(41, 339);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(702, 106);
-            this.panel2.TabIndex = 0;
+            this.panel4.BackgroundImage = global::FlightManagement.Properties.Resources.may_bay;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.Location = new System.Drawing.Point(41, 80);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(702, 253);
+            this.panel4.TabIndex = 3;
             // 
-            // lblUserName
+            // btnLogin
             // 
-            this.lblUserName.BackColor = System.Drawing.Color.MistyRose;
-            this.lblUserName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(16, 36);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(186, 41);
-            this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "Tên đăng nhập:";
-            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblUserName.Click += new System.EventHandler(this.label1_Click);
+            this.btnLogin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(146, 560);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(176, 45);
+            this.btnLogin.TabIndex = 1;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txtUserName
+            // btnExit
             // 
-            this.txtUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(269, 36);
-            this.txtUserName.Multiline = true;
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(421, 41);
-            this.txtUserName.TabIndex = 1;
+            this.btnExit.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnExit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(444, 560);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(183, 45);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // panel3
             // 
@@ -120,37 +122,36 @@ namespace FlightManagement
             this.lblPassWord.Text = "Mật khẩu:";
             this.lblPassWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnLogin
+            // panel2
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(146, 560);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(176, 45);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "Đăng nhập";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.panel2.Controls.Add(this.txtUserName);
+            this.panel2.Controls.Add(this.lblUserName);
+            this.panel2.Location = new System.Drawing.Point(41, 339);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(702, 106);
+            this.panel2.TabIndex = 0;
             // 
-            // btnExit
+            // txtUserName
             // 
-            this.btnExit.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnExit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(444, 560);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(183, 45);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.txtUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(269, 36);
+            this.txtUserName.Multiline = true;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(421, 41);
+            this.txtUserName.TabIndex = 1;
             // 
-            // panel4
+            // lblUserName
             // 
-            this.panel4.BackgroundImage = global::FlightManagement.Properties.Resources.may_bay;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(41, 80);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(702, 253);
-            this.panel4.TabIndex = 3;
+            this.lblUserName.BackColor = System.Drawing.Color.MistyRose;
+            this.lblUserName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(16, 36);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(186, 41);
+            this.lblUserName.TabIndex = 0;
+            this.lblUserName.Text = "Tên đăng nhập:";
+            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUserName.Click += new System.EventHandler(this.label1_Click);
             // 
             // FLogin
             // 
@@ -162,11 +163,12 @@ namespace FlightManagement
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FLogin_FormClosing);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
