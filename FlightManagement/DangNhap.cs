@@ -22,11 +22,13 @@ namespace FlightManagement
             provider = new DataProvider();
         }
 
-        private bool UserLogin(UserDto u)
+        private bool UserLogin(Account a)
         {
-            string sql = "SELECT COUNT() From";
+            string sql = "SELECT COUNT(UserName) From KhachHang where UserName = @Username AND PassWord = @Password ";
             SqlCommand cmd = new SqlCommand(sql,provider.getCN());
-            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@Username", a.Username.Trim());
+            cmd.Parameters.AddWithValue("@Password", a.Password.Trim());
+            //cmd.CommandType = CommandType.Text;
             provider.Connect();
             int num = (int)cmd.ExecuteScalar();
             provider.Disconnect();
@@ -37,8 +39,8 @@ namespace FlightManagement
             string user, pass;
             user = txtUserName.Text.Trim();
             pass = txtPassWord.Text;
-            UserDto u = new UserDto(user, pass);
-            if(UserLogin(u)==true)
+            Account a = new Account(user, pass);
+            if(UserLogin(a)==true)
             {
                 ChuongTrinh f = new ChuongTrinh();
                 this.Hide();
@@ -73,6 +75,12 @@ namespace FlightManagement
             }
         }
 
-        
+        private void btnDangKy_Click(object sender, EventArgs e)
+        {
+            DangKy d = new DangKy();
+            this.Hide();
+            d.ShowDialog();
+            this.Show();
+        }
     }
 }

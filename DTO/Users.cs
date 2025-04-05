@@ -19,10 +19,18 @@ namespace DTO
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public UserDto(string Username,string Password)
+        public UserDto(string username, string password, string firstName, string lastName,
+                   DateTime? dateOfBirth, string email, string phoneNumber, string userRole)
         {
-            this.Username = Username;
-            this.Password = Password;
+            Username = username;
+            Password = password;
+            FirstName = firstName;
+            LastName = lastName;
+            DateOfBirth = dateOfBirth;
+            Email = email;
+            PhoneNumber = phoneNumber;
+            UserRole = userRole;
         }
+        public UserDto() { }
     }
 }

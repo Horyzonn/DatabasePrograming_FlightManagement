@@ -31,6 +31,8 @@ namespace FlightManagement
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDangKy = new System.Windows.Forms.Button();
+            this.lblDangKy = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -47,31 +49,62 @@ namespace FlightManagement
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.MistyRose;
+            this.panel1.Controls.Add(this.btnDangKy);
+            this.panel1.Controls.Add(this.lblDangKy);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(599, 121);
+            this.panel1.Location = new System.Drawing.Point(576, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(798, 730);
+            this.panel1.Size = new System.Drawing.Size(798, 737);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDangKy
+            // 
+            this.btnDangKy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDangKy.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnDangKy.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.Location = new System.Drawing.Point(560, 685);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(183, 49);
+            this.btnDangKy.TabIndex = 5;
+            this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
+            // 
+            // lblDangKy
+            // 
+            this.lblDangKy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDangKy.AutoSize = true;
+            this.lblDangKy.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangKy.Location = new System.Drawing.Point(323, 697);
+            this.lblDangKy.Name = "lblDangKy";
+            this.lblDangKy.Size = new System.Drawing.Size(217, 24);
+            this.lblDangKy.TabIndex = 4;
+            this.lblDangKy.Text = "Bạn chưa có tài khoản?";
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackgroundImage = global::FlightManagement.Properties.Resources.may_bay;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Location = new System.Drawing.Point(41, 80);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(702, 253);
+            this.panel4.Size = new System.Drawing.Size(702, 284);
             this.panel4.TabIndex = 3;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(146, 560);
+            this.btnLogin.Location = new System.Drawing.Point(148, 581);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(176, 45);
             this.btnLogin.TabIndex = 1;
@@ -81,9 +114,10 @@ namespace FlightManagement
             // 
             // btnExit
             // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnExit.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(444, 560);
+            this.btnExit.Location = new System.Drawing.Point(421, 581);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(183, 45);
             this.btnExit.TabIndex = 2;
@@ -93,20 +127,24 @@ namespace FlightManagement
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.txtPassWord);
             this.panel3.Controls.Add(this.lblPassWord);
-            this.panel3.Location = new System.Drawing.Point(41, 451);
+            this.panel3.Location = new System.Drawing.Point(41, 482);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(702, 82);
             this.panel3.TabIndex = 1;
             // 
             // txtPassWord
             // 
+            this.txtPassWord.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassWord.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassWord.Location = new System.Drawing.Point(269, 16);
+            this.txtPassWord.Location = new System.Drawing.Point(259, 16);
             this.txtPassWord.Multiline = true;
             this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Size = new System.Drawing.Size(421, 41);
+            this.txtPassWord.Size = new System.Drawing.Size(389, 41);
             this.txtPassWord.TabIndex = 1;
             this.txtPassWord.UseSystemPasswordChar = true;
             // 
@@ -115,7 +153,7 @@ namespace FlightManagement
             this.lblPassWord.BackColor = System.Drawing.Color.MistyRose;
             this.lblPassWord.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPassWord.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassWord.Location = new System.Drawing.Point(16, 16);
+            this.lblPassWord.Location = new System.Drawing.Point(48, 16);
             this.lblPassWord.Name = "lblPassWord";
             this.lblPassWord.Size = new System.Drawing.Size(186, 41);
             this.lblPassWord.TabIndex = 0;
@@ -124,20 +162,24 @@ namespace FlightManagement
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.txtUserName);
             this.panel2.Controls.Add(this.lblUserName);
-            this.panel2.Location = new System.Drawing.Point(41, 339);
+            this.panel2.Location = new System.Drawing.Point(41, 370);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(702, 106);
             this.panel2.TabIndex = 0;
             // 
             // txtUserName
             // 
+            this.txtUserName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(269, 36);
+            this.txtUserName.Location = new System.Drawing.Point(259, 36);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(421, 41);
+            this.txtUserName.Size = new System.Drawing.Size(389, 41);
             this.txtUserName.TabIndex = 1;
             // 
             // lblUserName
@@ -145,7 +187,7 @@ namespace FlightManagement
             this.lblUserName.BackColor = System.Drawing.Color.MistyRose;
             this.lblUserName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(16, 36);
+            this.lblUserName.Location = new System.Drawing.Point(48, 36);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(186, 41);
             this.lblUserName.TabIndex = 0;
@@ -157,6 +199,7 @@ namespace FlightManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1848, 761);
             this.Controls.Add(this.panel1);
             this.Name = "FLogin";
@@ -165,6 +208,7 @@ namespace FlightManagement
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FLogin_FormClosing);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -190,6 +234,8 @@ namespace FlightManagement
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnDangKy;
+        private System.Windows.Forms.Label lblDangKy;
     }
 }
 

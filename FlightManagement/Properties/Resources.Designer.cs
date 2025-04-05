@@ -63,6 +63,16 @@ namespace FlightManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bầu_trời {
+            get {
+                object obj = ResourceManager.GetObject("bầu trời", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap may_bay {
             get {
                 object obj = ResourceManager.GetObject("may bay", resourceCulture);
