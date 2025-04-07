@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace DAO
 {
@@ -39,7 +40,8 @@ namespace DAO
             }
         }
 
-        public object ExeScalar(string sql, CommandType type)
+        //Read data and return single value
+        public object ExeScalar(string sql, CommandType type, params SqlParameter[] parameters)
         {
             SqlCommand cmd = new SqlCommand(sql, cn);
             cmd.CommandType = type;
@@ -47,13 +49,19 @@ namespace DAO
             try
             {
                 Connect();
-                return(cmd.ExecuteScalar());
+                
+               
+                    
+                   
+                    return cmd.ExecuteScalar();
+               
             }
             catch (SqlException ex)
             {
                 throw ex;
             }
-            finally { 
+            finally
+            {
                 Disconnect();
             }
         }

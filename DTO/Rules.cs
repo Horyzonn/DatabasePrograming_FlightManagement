@@ -17,5 +17,22 @@ namespace DTO
         public double TimeBuyTicket { get; set; }
         public DateTime? CreatedAt { get; set; }
         public int AuthorId { get; set; }
+        public Rules(int id, double minTimeFlight, int maxQuantityBetweenAirport, double minTimeStayAirport, double maxTimeStayAirport, double timeBookTicket, double timeBuyTicket, DateTime? createdAt, int authorId)
+        {
+            this.Id = id;
+            this.MinTimeFlight = minTimeFlight;
+            this.MaxQuantityBetweenAirport = maxQuantityBetweenAirport;
+            this.MinTimeStayAirport = minTimeStayAirport;
+            this.MaxTimeStayAirport = maxTimeStayAirport;
+            this.TimeBookTicket = timeBookTicket;
+            this.TimeBuyTicket = timeBuyTicket;
+            this.CreatedAt = createdAt;
+            this.AuthorId = authorId;
+        }
+
+        public Rules()
+        {
+            // Default constructor
+        }
     }
 }

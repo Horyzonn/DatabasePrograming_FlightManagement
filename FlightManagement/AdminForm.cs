@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace FlightManagement
 {
-    public partial class Form1 : Form
+    public partial class AdminForm : Form
     {
-        public Form1()
+        public AdminForm()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }

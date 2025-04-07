@@ -12,5 +12,18 @@ namespace DTO
         public string DepartureAirport { get; set; }
         public string ArrivalAirport { get; set; }
         public DateTime? CreatedDate { get; set; }
+
+        public Routes(int id, string departureAirport, string arrivalAirport, DateTime? createdDate)
+        {
+            this.Id = id;
+            this.DepartureAirport = departureAirport;
+            this.ArrivalAirport = arrivalAirport;
+            this.CreatedDate = createdDate;
+        }
+
+        public Routes()
+        {
+            // Default constructor
+        }
     }
 }
