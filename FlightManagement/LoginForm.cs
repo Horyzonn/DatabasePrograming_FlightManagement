@@ -47,17 +47,52 @@ namespace FlightManagement
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
-            if(UserLogin(username, password))
+
+            //Xử lí đầu vào
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Mở form chính của ứng dụng
-                AdminForm adminForm = new AdminForm();
-                adminForm.Show();
+                MessageBox.Show("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!",
+                              "Cảnh báo",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Warning);
+                txtUsername.Focus();
+                return;
+            }
+            if (cbRole.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng chọn quyền truy cập!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (UserLogin(username, password))
+            {
+                if(cbRole.Text == "Admin")
+                {
+                    AdminForm adminForm = new AdminForm();
+                    adminForm.Show();
+                }
+                else if (cbRole.Text == "Nhân viên")
+                {
+                    MessageBox.Show("Đăng nhập thành công với quyền Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (cbRole.Text == "Khách hàng")
+                {
+                    MessageBox.Show("Đăng nhập thành công với quyền Khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Quyền truy cập không hợp lệ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 this.Hide(); // Ẩn form đăng nhập
             }
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPassword.Clear();
+                txtUsername.SelectAll();
+                txtUsername.Focus();
             }
 
         }

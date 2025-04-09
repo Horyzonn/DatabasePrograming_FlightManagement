@@ -40,7 +40,7 @@ namespace DAO
             }
         }
 
-        //Read data and return single value
+        //Trả về giá trị số duy nhất
         public object ExeScalar(string sql, CommandType type, params SqlParameter[] parameters)
         {
             SqlCommand cmd = null;
@@ -71,6 +71,86 @@ namespace DAO
                     cmd.Dispose();
                 }
                 Disconnect();
+            }
+        }
+
+        // 2. ExecuteQuery: Trả về DataTable
+        public DataTable ExeQuery(string sql, CommandType type, params SqlParameter[] parameters)
+        {
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.CommandType = type;
+            DataTable dt = new DataTable();
+
+            try
+            {
+                Connect();
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+                return dt;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi ExecuteQuery: " + ex.Message, ex);
+            }
+            finally
+            {
+                cmd.Parameters.Clear();
+                Disconnect();
+            }
+        }
+
+        // 3. ExecuteNonQuery: Thực thi INSERT/UPDATE/DELETE
+        public int ExeNonQuery(string sql, CommandType type, params SqlParameter[] parameters)
+        {
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.CommandType = type;
+
+            try
+            {
+                Connect();
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+                return cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi ExecuteNonQuery: " + ex.Message, ex);
+            }
+            finally
+            {
+                cmd.Parameters.Clear();
+                Disconnect();
+            }
+        }
+
+        // 4. ExecuteReader: Đọc dữ liệu tuần tự
+        public SqlDataReader ExeReader(string sql, CommandType type, params SqlParameter[] parameters)
+        {
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.CommandType = type;
+
+            try
+            {
+                Connect();
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+                return cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            }
+            catch (SqlException ex)
+            {
+                Disconnect();
+                throw new Exception("Lỗi ExecuteReader: " + ex.Message, ex);
             }
         }
 

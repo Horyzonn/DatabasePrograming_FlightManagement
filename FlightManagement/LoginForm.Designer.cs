@@ -38,6 +38,8 @@
             this.btnForgot = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.cbRole = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +51,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
-            this.label1.Location = new System.Drawing.Point(98, 68);
+            this.label1.Location = new System.Drawing.Point(80, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(311, 52);
             this.label1.TabIndex = 0;
@@ -101,7 +103,7 @@
             this.txtUsername.Location = new System.Drawing.Point(45, 180);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(400, 35);
-            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
@@ -110,7 +112,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(400, 35);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.TabIndex = 3;
             // 
             // btnForgot
             // 
@@ -123,7 +125,7 @@
             this.btnForgot.Location = new System.Drawing.Point(320, 295);
             this.btnForgot.Name = "btnForgot";
             this.btnForgot.Size = new System.Drawing.Size(125, 35);
-            this.btnForgot.TabIndex = 6;
+            this.btnForgot.TabIndex = 5;
             this.btnForgot.Text = "Quên mật khẩu?";
             this.btnForgot.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnForgot.UseVisualStyleBackColor = false;
@@ -138,7 +140,7 @@
             this.btnRegister.Location = new System.Drawing.Point(40, 295);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(125, 35);
-            this.btnRegister.TabIndex = 7;
+            this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "Đăng ký";
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -154,10 +156,33 @@
             this.btnLogin.Location = new System.Drawing.Point(45, 356);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(400, 56);
-            this.btnLogin.TabIndex = 8;
+            this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // cbRole
+            // 
+            this.cbRole.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRole.FormattingEnabled = true;
+            this.cbRole.Items.AddRange(new object[] {
+            "Khách hàng",
+            "Nhân viên",
+            "Admin"});
+            this.cbRole.Location = new System.Drawing.Point(194, 107);
+            this.cbRole.Name = "cbRole";
+            this.cbRole.Size = new System.Drawing.Size(251, 36);
+            this.cbRole.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(41, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 24);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Loại đăng nhập";
             // 
             // LoginForm
             // 
@@ -165,6 +190,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(995, 502);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbRole);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnForgot);
@@ -200,5 +227,7 @@
         private System.Windows.Forms.Button btnForgot;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.ComboBox cbRole;
+        private System.Windows.Forms.Label label4;
     }
 }
