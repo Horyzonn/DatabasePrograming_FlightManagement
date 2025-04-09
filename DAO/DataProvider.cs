@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Data;
@@ -43,31 +43,50 @@ namespace DAO
         //Read data and return single value
         public object ExeScalar(string sql, CommandType type, params SqlParameter[] parameters)
         {
-            SqlCommand cmd = new SqlCommand(sql, cn);
-            cmd.CommandType = type;
-
+            SqlCommand cmd = null;
             try
             {
+                cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+
+                // Thêm parameters nếu có
+                if (parameters != null && parameters.Length > 0)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+
                 Connect();
-                
-               
-                    
-                   
-                    return cmd.ExecuteScalar();
-               
+                return cmd.ExecuteScalar();
             }
             catch (SqlException ex)
             {
-                throw ex;
+                throw new Exception("Lỗi thực thi SQL: " + ex.Message, ex);
             }
             finally
             {
+                // Giải phóng tài nguyên thủ công
+                if (cmd != null)
+                {
+                    cmd.Parameters.Clear();
+                    cmd.Dispose();
+                }
                 Disconnect();
             }
         }
+
+        // Hàm hủy (finalizer) để dọn dẹp khi đối tượng bị thu hồi
+        ~DataProvider()
+        {
+            if (cn != null)
+            {
+                Disconnect();
+                cn.Dispose();
+            }
+        }
+
     }
 
 
 
-    
+
 }
