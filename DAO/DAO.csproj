@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAirportDAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="LoginDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

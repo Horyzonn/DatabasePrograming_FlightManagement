@@ -49,9 +49,24 @@ namespace FlightManagement
             pnlMainContent.Controls.Add(userControl);
             userControl.BringToFront();
         }
+
+        private void HighlightButton(Button button)
+        {
+            foreach (Control control in panel1.Controls)
+            {
+                if (control is Button btn)
+                {
+                    btn.BackColor = Color.FromArgb(32,71,105); // Màu nền mặc định
+                }
+            }
+            button.BackColor = Color.LightBlue; // Màu nền khi được chọn
+        }
+
         private void btnRoute_Click(object sender, EventArgs e)
         {
             LoadUserControl(new RouteManagement());
+            HighlightButton(btnRoute);
+
         }
     }
 }
