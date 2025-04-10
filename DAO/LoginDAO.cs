@@ -16,7 +16,8 @@ namespace DAO
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@Username", username),
-                new SqlParameter("@Password", password)
+                new SqlParameter("@Password", password),
+               
             };
             try
             {
