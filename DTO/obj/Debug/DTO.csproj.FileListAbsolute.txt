@@ -4,3 +4,9 @@ D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\DTO\obj\Debug\DTO.csproj.As
 D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\DTO\obj\Debug\DTO.dll
 D:\Users\pc\Desktop\OU\LTCSDL\FlightManagementSystem\DTO\obj\Debug\DTO.pdb
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\bin\Debug\DTO.dll
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\bin\Debug\DTO.pdb
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.dll
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.pdb

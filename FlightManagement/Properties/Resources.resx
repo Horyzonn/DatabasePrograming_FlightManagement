@@ -121,10 +121,13 @@
   <data name="avt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thumb-1920-413684" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thumb-1920-413684.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="User_icon_2.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User_icon_2.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="thumb-1920-4136841" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thumb-1920-4136841.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thumb-1920-413684" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thumb-1920-413684.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

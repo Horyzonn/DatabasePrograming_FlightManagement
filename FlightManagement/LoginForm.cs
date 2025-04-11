@@ -27,7 +27,9 @@ namespace FlightManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            RegisterForm registerForm = new RegisterForm();
+            this.Hide();
+            registerForm.Show();
         }
 
         private bool UserLogin(string username, string password)
@@ -95,6 +97,13 @@ namespace FlightManagement
                 txtUsername.Focus();
             }
 
+        }
+
+        private void btnForgot_Click(object sender, EventArgs e)
+        {
+            ResetPasswordForm resetPassword = new ResetPasswordForm();
+            this.Hide();
+            resetPassword.Show();
         }
     }
 }
