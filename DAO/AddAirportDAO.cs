@@ -34,5 +34,10 @@ namespace DAO
                 Disconnect();
             }
         }
+        public DataTable GetAllAirports()
+        {
+            string sql = "SELECT * FROM Airports";
+            return ExeQuery(sql, CommandType.Text); // Dùng từ DataProvider
+        }
     }
 }

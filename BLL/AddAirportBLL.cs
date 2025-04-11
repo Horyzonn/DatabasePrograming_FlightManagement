@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,11 @@ namespace BLL
         public AddAirportBLL()
         {
             addAirportDAO = new AddAirportDAO();
+        }
+
+        public DataTable GetAllAirports()
+        {
+            return addAirportDAO.GetAllAirports();
         }
 
         public bool AddNewAirport(string code, string name, string location)
