@@ -41,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnUpDate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAirport)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -183,11 +184,25 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // btnUpDate
+            // 
+            this.btnUpDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
+            this.btnUpDate.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpDate.ForeColor = System.Drawing.Color.White;
+            this.btnUpDate.Location = new System.Drawing.Point(222, 541);
+            this.btnUpDate.Name = "btnUpDate";
+            this.btnUpDate.Size = new System.Drawing.Size(156, 48);
+            this.btnUpDate.TabIndex = 4;
+            this.btnUpDate.Text = "Sửa";
+            this.btnUpDate.UseVisualStyleBackColor = false;
+            this.btnUpDate.Click += new System.EventHandler(this.btnUpDate_Click);
+            // 
             // AirPortForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 601);
+            this.Controls.Add(this.btnUpDate);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
@@ -221,5 +236,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnUpDate;
     }
 }

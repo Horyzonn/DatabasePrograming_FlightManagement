@@ -15,20 +15,20 @@ namespace FlightManagement
 {
     public partial class AirPortForm : Form
     {
-        private AddAirportBLL addAirportBLL;
-        private DeleteAirportBLL deleteAirportBLL;
+        private AirportBLL airportBLL;
+        
         public AirPortForm()
         {
             InitializeComponent();
-            addAirportBLL = new AddAirportBLL();
-            deleteAirportBLL = new DeleteAirportBLL();
-
+            airportBLL = new AirportBLL();
             LoadAirportList();
+
+            dgvAirport.CellClick += dgvAirport_CellClick;
         }
 
         private void LoadAirportList()
         {
-            DataTable dt = addAirportBLL.GetAllAirports();
+            DataTable dt = airportBLL.GetAllAirports();
             dgvAirport.DataSource = dt;
         }
 
@@ -50,12 +50,18 @@ namespace FlightManagement
 
             try
             {
-                bool success = addAirportBLL.AddNewAirport(code, name, location);
+                if (airportBLL.IsAirportCodeExists(code))
+                {
+                    MessageBox.Show("Mã sân bay đã tồn tại. Vui lòng nhập mã khác.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                bool success = airportBLL.AddNewAirport(code, name, location);
                 if (success)
                 {
                     MessageBox.Show("Thêm sân bay thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearInputs();
-                    LoadAirportList(); 
+                    LoadAirportList();
                 }
                 else
                 {
@@ -90,7 +96,7 @@ namespace FlightManagement
             var confirm = MessageBox.Show("Bạn có chắc muốn xóa sân bay này không?", "Xác nhận xóa", MessageBoxButtons.YesNo);
             if (confirm == DialogResult.Yes)
             {
-                bool success = deleteAirportBLL.DeleteAirport(code);
+                bool success = airportBLL.DeleteAirport(code);
                 if (success)
                 {
                     MessageBox.Show("Đã xóa sân bay thành công.");
@@ -111,6 +117,55 @@ namespace FlightManagement
                 AdminForm f = new AdminForm();
                 this.Hide();
                 f.Show();
+            }
+        }
+
+        private void dgvAirport_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvAirport.Rows[e.RowIndex];
+
+                txtCode.Text = row.Cells["Code"].Value.ToString();
+                txtName.Text = row.Cells["Name"].Value.ToString();
+                txtLocation.Text = row.Cells["Location"].Value.ToString();
+            }
+        }
+
+        private void btnUpDate_Click(object sender, EventArgs e)
+        {
+            string code = txtCode.Text.Trim();
+            string name = txtName.Text.Trim();
+            string location = txtLocation.Text.Trim();
+
+            if (string.IsNullOrEmpty(code) || string.IsNullOrEmpty(name) || string.IsNullOrEmpty(location))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                if (!airportBLL.IsAirportCodeExists(code))
+                {
+                    MessageBox.Show("Mã sân bay không tồn tại. Không thể cập nhật.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                bool success = airportBLL.UpdateAirport(code, name, location);
+                if (success)
+                {
+                    MessageBox.Show("Cập nhật sân bay thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadAirportList();
+                    ClearInputs();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật sân bay thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

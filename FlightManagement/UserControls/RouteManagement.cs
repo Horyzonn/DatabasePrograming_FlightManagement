@@ -13,11 +13,11 @@ namespace FlightManagement.User_Control
 {
     public partial class RouteManagement : UserControl
     {
-        private AddAirportBLL addAirportBLL;
+        private AirportBLL addAirportBLL;
         public RouteManagement()
         {
             InitializeComponent();
-            addAirportBLL = new AddAirportBLL();
+            addAirportBLL = new AirportBLL();
         }
 
         private void label1_Click(object sender, EventArgs e)

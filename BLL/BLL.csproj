@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAirportBLL.cs" />
-    <Compile Include="DeleteAirportBLL.cs" />
+    <Compile Include="AirportBLL.cs" />
+    <Compile Include="RouteBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="PasswordHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
