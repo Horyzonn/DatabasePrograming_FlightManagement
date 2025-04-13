@@ -88,30 +88,6 @@ namespace DAO
             }
         }
 
-        public bool UpdateAirport(string code, string name, string location)
-        {
-            string sql = "UPDATE Airports SET Name = @Name, Location = @Location WHERE Code = @Code";
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-        new SqlParameter("@Code", code),
-        new SqlParameter("@Name", name),
-        new SqlParameter("@Location", location)
-            };
-
-            try
-            {
-                Connect();
-                int result = ExeNonQuery(sql, CommandType.Text, parameters);
-                return result > 0;
-            }
-            catch (SqlException ex)
-            {
-                throw new Exception("Lỗi khi cập nhật sân bay: " + ex.Message, ex);
-            }
-            finally
-            {
-                Disconnect();
-            }
-        }
+        
     }
 }

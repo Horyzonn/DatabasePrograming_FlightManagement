@@ -11,15 +11,16 @@ namespace DAO
 {
     public class RouteDAO:DataProvider
     {
-        public bool AddRoute(Routes route)
+        public bool AddRoute(string departureAirport, string arrivalAirport)
         {
-            string sql = "INSERT INTO Routes (DepartureAirport, ArrivalAirport, CreatedDate) " +
-                         "VALUES (@Departure, @Arrival, @Date)";
+            string sql = "INSERT INTO Routes ( DepartureAirport, ArrivalAirport) " +
+                         "VALUES ( @Departure, @Arrival,)";
             SqlParameter[] parameters = new SqlParameter[]
             {
-            new SqlParameter("@Departure", route.DepartureAirport),
-            new SqlParameter("@Arrival", route.ArrivalAirport),
-            new SqlParameter("@Date", (object)route.CreatedDate ?? DBNull.Value)
+               
+            new SqlParameter("@Departure", departureAirport),
+            new SqlParameter("@Arrival", arrivalAirport),
+            
             };
 
             try
@@ -43,38 +44,15 @@ namespace DAO
             return ExeQuery(sql, CommandType.Text);
         }
 
-        public bool UpdateRoute(Routes route)
+       
+
+        public bool DeleteRoute(string departure, string arrival)
         {
-            string sql = "UPDATE Routes SET DepartureAirport = @Departure, ArrivalAirport = @Arrival, CreatedDate = @Date WHERE Id = @Id";
+            string sql = "DELETE FROM Routes WHERE DepartureAirport = @departure AND ArrivalAirport = @arrival";
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@Id", route.Id),
-                new SqlParameter("@Departure", route.DepartureAirport),
-                new SqlParameter("@Arrival", route.ArrivalAirport),
-                new SqlParameter("@Date", (object)route.CreatedDate ?? DBNull.Value)
-            };
-
-            try
-            {
-                Connect();
-                return ExeNonQuery(sql, CommandType.Text, parameters) > 0;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi cập nhật tuyến bay: " + ex.Message);
-            }
-            finally
-            {
-                Disconnect();
-            }
-        }
-
-        public bool DeleteRoute(int id)
-        {
-            string sql = "DELETE FROM Routes WHERE Id = @Id";
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-                new SqlParameter("@Id", id)
+                new SqlParameter("@Departure", departure),
+                new SqlParameter("@Arrival", arrival),
             };
 
             try

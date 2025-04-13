@@ -19,15 +19,15 @@ namespace BLL
             routeDAO = new RouteDAO();
         }
 
-        public bool AddNewRoute(Routes route)
+        public bool AddNewRoute(string departureAirport, string arrivalAirport)
         {
-            if (string.IsNullOrWhiteSpace(route.DepartureAirport) || string.IsNullOrWhiteSpace(route.ArrivalAirport))
+            if (string.IsNullOrWhiteSpace(departureAirport) || string.IsNullOrWhiteSpace(arrivalAirport))
                 throw new Exception("Sân bay đi và đến không được để trống.");
-            if (route.DepartureAirport == route.ArrivalAirport)
+            if (departureAirport == arrivalAirport)
                 throw new Exception("Sân bay đi và đến không được giống nhau.");
             try
             {
-                return routeDAO.AddRoute(route);
+                return routeDAO.AddRoute(departureAirport,arrivalAirport);
             }
             catch (Exception ex)
             {
@@ -35,28 +35,12 @@ namespace BLL
             }
         }
 
-        public bool UpdateRoute(Routes route)
-        {
-            if (string.IsNullOrWhiteSpace(route.DepartureAirport) || string.IsNullOrWhiteSpace(route.ArrivalAirport))
-                throw new Exception("Sân bay đi và đến không được để trống.");
-            if (route.DepartureAirport == route.ArrivalAirport)
-                throw new Exception("Sân bay đi và đến không được giống nhau.");
 
-            try
-            {
-                return routeDAO.UpdateRoute(route);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi cập nhật tuyến bay: " + ex.Message, ex);
-            }
-        }
-
-        public bool DeleteRoute(int id)
+        public bool DeleteRoute(string departureAirport, string arrivalAirport)
         {
             try
             {
-                return routeDAO.DeleteRoute(id);
+                return routeDAO.DeleteRoute(departureAirport,arrivalAirport);
             }
             catch (Exception ex)
             {

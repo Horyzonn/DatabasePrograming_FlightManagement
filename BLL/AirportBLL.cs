@@ -51,19 +51,6 @@ namespace BLL
             }
         }
 
-        public bool UpdateAirport(string code, string name, string location)
-        {
-            if (string.IsNullOrWhiteSpace(code) || string.IsNullOrWhiteSpace(name))
-                throw new ArgumentException("Thông tin sân bay không hợp lệ.");
-
-            try
-            {
-                return airportDAO.UpdateAirport(code, name, location);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi cập nhật sân bay: " + ex.Message, ex);
-            }
-        }
+       
     }
 }

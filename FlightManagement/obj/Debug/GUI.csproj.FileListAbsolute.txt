@@ -39,5 +39,6 @@ D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightMan
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.ResetPasswordForm.resources
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.AirPortForm.resources
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.RouteForm.resources
-D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.Up2Date
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.Flight.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.CopyComplete
