@@ -14,7 +14,7 @@ namespace DAO
     {
         private SqlConnection cn;
         public DataProvider() {
-            string cnStr = @"Data Source=LAPTOP-AUNQK92F\THIENPHU;Initial Catalog=FlightManagement;Integrated Security=True;";
+            string cnStr = @"Data Source=LAPTOP-I83CO42H\MAYAO;Initial Catalog=FlightManagement;Integrated Security=True;";
             cn = new SqlConnection(cnStr);
         }
 

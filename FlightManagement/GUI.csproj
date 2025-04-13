@@ -58,6 +58,12 @@
     <Compile Include="AirPortForm.Designer.cs">
       <DependentUpon>AirPortForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FlightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightForm.Designer.cs">
+      <DependentUpon>FlightForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AirPortForm.resx">
       <DependentUpon>AirPortForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightForm.resx">
+      <DependentUpon>FlightForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

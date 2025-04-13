@@ -27,7 +27,6 @@ D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\bin\Debug\BLL.pdb
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\bin\Debug\DAO.pdb
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\bin\Debug\DTO.pdb
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.AssemblyReference.cache
-D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.AdminForm.resources
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.LoginForm.resources
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.Properties.Resources.resources
@@ -35,7 +34,10 @@ D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightMan
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.User_Control.RouteManagement.resources
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.GenerateResource.cache
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.CoreCompileInputs.cache
-D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.CopyComplete
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.exe
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.pdb
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.ResetPasswordForm.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.AirPortForm.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.RouteForm.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.Up2Date
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.Flight.resources

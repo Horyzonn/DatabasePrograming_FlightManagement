@@ -17,6 +17,6 @@ D:\QLCB\DatabasePrograming_FlightManagement\BLL\bin\Debug\DAO.pdb
 D:\QLCB\DatabasePrograming_FlightManagement\BLL\bin\Debug\DTO.pdb
 D:\QLCB\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 D:\QLCB\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-D:\QLCB\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\QLCB\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.dll
 D:\QLCB\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.pdb
+D:\QLCB\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.csproj.Up2Date
