@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AirportDAO.cs" />
+    <Compile Include="FlightScheduleDAO.cs" />
     <Compile Include="RouteDAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="LoginDAO.cs" />

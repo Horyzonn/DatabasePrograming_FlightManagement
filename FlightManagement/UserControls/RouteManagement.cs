@@ -94,6 +94,7 @@ namespace FlightManagement.User_Control
                     MessageBox.Show("Thêm sân bay thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CleanInput();
                     LoadAirportList();
+                    LoadAirports();
                 }
                 else
                 {

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AirportBLL.cs" />
+    <Compile Include="FlightScheduleBLL.cs" />
     <Compile Include="RouteBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="PasswordHelper.cs" />

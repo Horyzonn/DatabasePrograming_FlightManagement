@@ -72,6 +72,12 @@
     <Compile Include="ResetPasswordForm.Designer.cs">
       <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\FlightManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FlightManagement.Designer.cs">
+      <DependentUpon>FlightManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\RouteManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResetPasswordForm.resx">
       <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FlightManagement.resx">
+      <DependentUpon>FlightManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\RouteManagement.resx">
       <DependentUpon>RouteManagement.cs</DependentUpon>
