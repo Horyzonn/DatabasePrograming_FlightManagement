@@ -27,14 +27,29 @@ namespace BLL
                                       decimal ticket1Price, decimal ticket2Price)
         
         {
-                return flightScheduleDAO.AddFlightSchedule( routeId,  departureTime,  arrivalTime,
-                                                            ticket1Quantity,  ticket2Quantity,
-                                                            ticket1BookedQuantity,  ticket2BookedQuantity,
-                                                            ticket1Price,  ticket2Price);
+            try
+            {
+                return flightScheduleDAO.AddFlightSchedule(routeId, departureTime, arrivalTime,
+                                                            ticket1Quantity, ticket2Quantity,
+                                                            ticket1BookedQuantity, ticket2BookedQuantity,
+                                                            ticket1Price, ticket2Price);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi thêm chuyến bay: " + ex.Message, ex);
+            }
         }
         public bool DeleteFlightSchedule(int id)
         {
-            return flightScheduleDAO.DeleteFlightSchedule(id);
+            try
+            {
+                return flightScheduleDAO.DeleteFlightSchedule(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi xóa chuyến bay: " + ex.Message, ex);
+            }
         }
 
 

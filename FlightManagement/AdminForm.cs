@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 using FlightManagement.User_Control;
+using FlightManagement.UserControls;
 
 namespace FlightManagement
 {
@@ -67,6 +69,12 @@ namespace FlightManagement
             LoadUserControl(new RouteManagement());
             HighlightButton(btnRoute);
 
+        }
+
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new FlightScheduleManagement());
+            HighlightButton(btnSchedule);
         }
     }
 }

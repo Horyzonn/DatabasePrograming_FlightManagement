@@ -114,7 +114,6 @@ namespace FlightManagement.User_Control
             cbDepAirport.DataSource = airports.Copy();
             cbDepAirport.DisplayMember = "Name";
             cbDepAirport.ValueMember = "Code";
-
             cbArrAirport.DataSource = airports.Copy();
             cbArrAirport.DisplayMember = "Name";
             cbArrAirport.ValueMember = "Code";
