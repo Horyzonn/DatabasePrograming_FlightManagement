@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,9 +46,9 @@ namespace BLL
             {
                 return airportDAO.DeleteAirport(code);
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                throw new Exception("Lỗi khi xóa sân bay trong BLL: " + ex.Message, ex);
+                throw new Exception("Lỗi khi xóa sân bay: " + ex.Message, ex);
             }
         }
 

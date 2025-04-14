@@ -30,7 +30,7 @@ namespace FlightManagement
                 DateOfBirth = dtpBirth.Value, 
                 Email = txtEmail.Text.Trim(),
                 PhoneNumber = txtPhone.Text.Trim(),
-                UserRole = "", 
+                UserRole = cbRole.SelectedItem?.ToString(),
                 FirstName = txtFirstname.Text.Trim(),
                 LastName = txtLastname.Text.Trim()
             };
@@ -40,7 +40,8 @@ namespace FlightManagement
                 string.IsNullOrWhiteSpace(newUser.Email) ||
                 string.IsNullOrWhiteSpace(newUser.PhoneNumber) ||
                 string.IsNullOrWhiteSpace(newUser.FirstName) ||
-                string.IsNullOrWhiteSpace(newUser.LastName))
+                string.IsNullOrWhiteSpace(newUser.LastName) ) 
+                
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!");
                 return;
@@ -55,7 +56,12 @@ namespace FlightManagement
             {
                 bool success = registerBLL.Register(newUser);
                 if (success)
+                {
                     MessageBox.Show("Đăng ký thành công!");
+                    LoginForm l = new LoginForm();
+                    this.Hide();
+                    l.Show();
+                }
                 else
                     MessageBox.Show("Đăng ký thất bại!");
             }

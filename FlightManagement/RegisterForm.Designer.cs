@@ -150,6 +150,8 @@
             // 
             this.cbRole.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRole.FormattingEnabled = true;
+            this.cbRole.Items.AddRange(new object[] {
+            "user"});
             this.cbRole.Location = new System.Drawing.Point(271, 97);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(376, 36);

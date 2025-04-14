@@ -25,6 +25,8 @@ namespace BLL
                 throw new Exception("Sân bay đi và đến không được để trống.");
             if (departureAirport == arrivalAirport)
                 throw new Exception("Sân bay đi và đến không được giống nhau.");
+            if (routeDAO.IsRouteExists(departureAirport, arrivalAirport))
+                throw new Exception("Tuyến bay này đã tồn tại.");
             try
             {
                 return routeDAO.AddRoute(departureAirport,arrivalAirport);

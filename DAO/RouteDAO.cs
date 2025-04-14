@@ -14,7 +14,7 @@ namespace DAO
         public bool AddRoute(string departureAirport, string arrivalAirport)
         {
             string sql = "INSERT INTO Routes ( DepartureAirport, ArrivalAirport) " +
-                         "VALUES ( @Departure, @Arrival,)";
+                         "VALUES ( @Departure, @Arrival)";
             SqlParameter[] parameters = new SqlParameter[]
             {
                
@@ -44,7 +44,25 @@ namespace DAO
             return ExeQuery(sql, CommandType.Text);
         }
 
-       
+        public bool IsRouteExists(string departure, string arrival)
+        {
+            string sql = "SELECT COUNT(*) FROM Routes WHERE DepartureAirport = @Departure AND ArrivalAirport = @Arrival";
+            SqlParameter[] parameters =
+            {
+                new SqlParameter("@Departure", departure),
+                new SqlParameter("@Arrival", arrival)
+            };
+
+            try
+            {
+                Connect();
+                return (int)ExeScalar(sql, CommandType.Text, parameters) > 0;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
 
         public bool DeleteRoute(string departure, string arrival)
         {
@@ -62,7 +80,7 @@ namespace DAO
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi xóa tuyến bay: " + ex.Message);
+                throw new Exception("Lỗi xóa tuyến bay: " + ex.Message, ex);
             }
             finally
             {

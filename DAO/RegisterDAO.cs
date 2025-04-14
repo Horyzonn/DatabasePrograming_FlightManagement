@@ -33,20 +33,23 @@ namespace DAO
         public bool RegisterUser(Users user)
         {
             string sql = @"INSERT INTO Users 
-                        (Username, Password, DateOfBirth, Email, PhoneNumber, UserRole, FirstName, LastName)
+                        (Username, Password, DoB, Email, PhoneNumber, UserRole)
                        VALUES 
-                        (@Username, @Password, @DateOfBirth, @Email, @PhoneNumber, @UserRole, @FirstName, @LastName)";
+                        (@Username, @Password, @DateOfBirth, @Email, @PhoneNumber, @UserRole)";
 
             SqlParameter[] parameters =
             {
             new SqlParameter("@Username", user.Username),
             new SqlParameter("@Password", user.Password),
-            new SqlParameter("@DateOfBirth", (object)user.DateOfBirth ?? DBNull.Value),
+            new SqlParameter("@DateOfBirth", SqlDbType.Date)
+            {
+                Value = (object)user.DateOfBirth ?? DBNull.Value
+            },
             new SqlParameter("@Email", user.Email),
             new SqlParameter("@PhoneNumber", user.PhoneNumber),
             new SqlParameter("@UserRole", user.UserRole),
-            new SqlParameter("@FirstName", user.FirstName),
-            new SqlParameter("@LastName", user.LastName)
+            //new SqlParameter("@FirstName", user.FirstName),
+            //new SqlParameter("@LastName", user.LastName)
             };
 
             try
