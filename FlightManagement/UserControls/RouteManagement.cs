@@ -167,11 +167,19 @@ namespace FlightManagement.User_Control
             var confirm = MessageBox.Show("Xóa sân bay này?", "Xác nhận", MessageBoxButtons.YesNo);
             if (confirm == DialogResult.Yes)
             {
-                bool success = airportBLL.DeleteAirport(airportCode);
-                if (!success)
+                try
                 {
-                    MessageBox.Show("Xóa sân bay thất bại.");
-                    e.Cancel = true;
+                    bool success = airportBLL.DeleteAirport(airportCode);
+                    if (!success)
+                    {
+                        MessageBox.Show("Xóa sân bay thất bại.");
+                        e.Cancel = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true; // hủy xóa hàng
                 }
             }
             else

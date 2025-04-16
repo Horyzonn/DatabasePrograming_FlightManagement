@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -15,10 +16,7 @@ namespace DAO
             string sql = "SELECT * FROM FlightSchedule";
             return ExeQuery(sql, CommandType.Text);
         }
-        public bool AddFlightSchedule(int routeId, DateTime departureTime, DateTime arrivalTime,
-                                      int ticket1Quantity, int ticket2Quantity,
-                                      int ticket1BookedQuantity, int ticket2BookedQuantity,
-                                      decimal ticket1Price, decimal ticket2Price)
+        public bool AddFlightSchedule(FlightSchedule flight)
         {
 
             string sql = @"INSERT INTO FlightSchedule 
@@ -29,16 +27,16 @@ namespace DAO
                          @Ticket1BookedQuantity, @Ticket2BookedQuantity, @Ticket1Price, @Ticket2Price)";
 
             SqlParameter[] parameters = new SqlParameter[]
-            {
-                new SqlParameter("@RouteId", routeId),
-                new SqlParameter("@DepartureTime", departureTime),
-                new SqlParameter("@ArrivalTime", arrivalTime),
-                new SqlParameter("@Ticket1Quantity", ticket1Quantity ),
-                new SqlParameter("@Ticket2Quantity", ticket2Quantity ),
-                new SqlParameter("@Ticket1BookedQuantity", ticket1BookedQuantity ),
-                new SqlParameter("@Ticket2BookedQuantity", ticket2BookedQuantity ),
-                new SqlParameter("@Ticket1Price", ticket1Price ),
-                new SqlParameter("@Ticket2Price", ticket2Price )
+            {                
+                new SqlParameter("@RouteId", flight.RouteId),
+                new SqlParameter("@DepartureTime",flight.DepartureTime),
+                new SqlParameter("@ArrivalTime", flight.ArrivalTime),
+                new SqlParameter("@Ticket1Quantity", flight.Ticket1Quantity ),
+                new SqlParameter("@Ticket2Quantity", flight.Ticket2Quantity),
+                new SqlParameter("@Ticket1BookedQuantity",flight.Ticket1BookedQuantity ),
+                new SqlParameter("@Ticket2BookedQuantity",flight.Ticket1BookedQuantity),
+                new SqlParameter("@Ticket1Price", flight.Ticket1Price ),
+                new SqlParameter("@Ticket2Price", flight.Ticket2Price )
             };
             try
             {
@@ -80,12 +78,9 @@ namespace DAO
             }
         }
 
-        public bool UpdateFlightSchedule(int id, int routeId, DateTime departureTime, DateTime arrivalTime,
-                                         int ticket1Quantity, int ticket2Quantity,
-                                         int ticket1BookedQuantity, int ticket2BookedQuantity,
-                                         decimal ticket1Price, decimal ticket2Price)
+        public bool UpdateFlightSchedule(FlightSchedule flight)
         {
-            string sql = @"UPDATE FlightSchedule SET 
+            string sql = @"UPDATE FlightSchedule SET                          
                             RouteId = @RouteId,
                             DepartureTime = @DepartureTime,
                             ArrivalTime = @ArrivalTime,
@@ -98,17 +93,16 @@ namespace DAO
                         WHERE Id = @Id";
 
             SqlParameter[] parameters = new SqlParameter[]
-            {
-                new SqlParameter("@Id", id),
-                new SqlParameter("@RouteId", routeId),
-                new SqlParameter("@DepartureTime", departureTime),
-                new SqlParameter("@ArrivalTime", arrivalTime),
-                new SqlParameter("@Ticket1Quantity", ticket1Quantity ),
-                new SqlParameter("@Ticket2Quantity", ticket2Quantity ),
-                new SqlParameter("@Ticket1BookedQuantity", ticket1BookedQuantity ),
-                new SqlParameter("@Ticket2BookedQuantity", ticket2BookedQuantity ),
-                new SqlParameter("@Ticket1Price", ticket1Price ),
-                new SqlParameter("@Ticket2Price", ticket2Price )
+            {              
+                new SqlParameter("@RouteId", flight.RouteId),
+                new SqlParameter("@DepartureTime",flight.DepartureTime),
+                new SqlParameter("@ArrivalTime", flight.ArrivalTime),
+                new SqlParameter("@Ticket1Quantity", flight.Ticket1Quantity ),
+                new SqlParameter("@Ticket2Quantity", flight.Ticket2Quantity),
+                new SqlParameter("@Ticket1BookedQuantity",flight.Ticket1BookedQuantity ),
+                new SqlParameter("@Ticket2BookedQuantity",flight.Ticket1BookedQuantity),
+                new SqlParameter("@Ticket1Price", flight.Ticket1Price ),
+                new SqlParameter("@Ticket2Price", flight.Ticket2Price )
             };
 
             try

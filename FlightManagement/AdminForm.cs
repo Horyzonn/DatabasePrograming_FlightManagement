@@ -76,5 +76,11 @@ namespace FlightManagement
             LoadUserControl(new FlightScheduleManagement());
             HighlightButton(btnSchedule);
         }
+
+        private void btnRule_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new RulesManagement());
+            HighlightButton(btnRule);
+        }
     }
 }

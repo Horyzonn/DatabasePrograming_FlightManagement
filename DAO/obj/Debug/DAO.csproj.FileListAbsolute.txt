@@ -15,4 +15,4 @@ D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.AssemblyRef
 D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.dll
 D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.pdb
-D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.Up2Date
+D:\QLCB\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.CopyComplete

@@ -12,10 +12,12 @@ namespace BLL
     public class AirportBLL
     {
         private AirportDAO airportDAO;
+        private RouteDAO routeDAO;
 
         public AirportBLL()
         {
             airportDAO = new AirportDAO();
+            routeDAO = new RouteDAO();
         }
 
         public DataTable GetAllAirports()
@@ -42,13 +44,20 @@ namespace BLL
 
         public bool DeleteAirport(string code)
         {
-            try
+            if (!routeDAO.HasRouteUsingAirport(code))
             {
-                return airportDAO.DeleteAirport(code);
+                try
+                {
+                    return airportDAO.DeleteAirport(code);
+                }
+                catch (SqlException ex)
+                {
+                    throw new Exception("Lỗi khi xóa sân bay: " + ex.Message, ex);
+                }
             }
-            catch (SqlException ex)
+            else
             {
-                throw new Exception("Lỗi khi xóa sân bay: " + ex.Message, ex);
+                throw new Exception("Sân bay đang được sử dụng, không thể xóa.");
             }
         }
 

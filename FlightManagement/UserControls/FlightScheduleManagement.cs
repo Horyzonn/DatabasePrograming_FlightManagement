@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,8 +30,8 @@ namespace FlightManagement.UserControls
         {
             DataTable routes = routeBLL.GetAllRoutes();
             cbRouteId.DataSource = routes.Copy();
-            cbRouteId.DisplayMember = "RouteId";   // Hiển thị RouteId
-            cbRouteId.ValueMember = "RouteId";      // Lấy RouteId
+            cbRouteId.DisplayMember = "ID";   // Hiển thị RouteId
+            cbRouteId.ValueMember = "ID";      // Lấy RouteId
         }
 
         private void LoadFlightSchedulesList()
@@ -44,29 +45,33 @@ namespace FlightManagement.UserControls
 
         private void btnAddFlight_Click(object sender, EventArgs e)
         {
-            int routeId = Convert.ToInt32(cbRouteId.SelectedValue);
-            DateTime departure = dtpDeparture.Value;
-            DateTime arrival = dtpArrival.Value;
-            int t1Qty = (int)numTicket1Qty.Value;
-            int t2Qty = (int)numTicket2Qty.Value;
-            int t1Booked = (int)numT1Booked.Value;
-            int t2Booked = (int)numT2Booked.Value;
-            decimal t1Price = numT1Price.Value;
-            decimal t2Price = numT2Price.Value;
+            FlightSchedule flight = new FlightSchedule()
+            {               
+                RouteId = Convert.ToInt32(cbRouteId.SelectedValue),
+                DepartureTime = dtpDeparture.Value,
+                ArrivalTime = dtpArrival.Value,
+                Ticket1Quantity = (int)numTicket1Qty.Value,
+                Ticket2Quantity = (int)numTicket2Qty.Value,
+                Ticket1BookedQuantity = (int)numT1Booked.Value,
+                Ticket2BookedQuantity = (int)numT2Booked.Value,
+                Ticket1Price = numT1Price.Value,
+                Ticket2Price = numT2Price.Value
+            };
+            
 
             if (cbRouteId.SelectedItem == null)
             {
                 MessageBox.Show("Vui lòng chọn tuyến bay.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (arrival <= departure)
+            if (flight.ArrivalTime <= flight.DepartureTime)
             {
                 MessageBox.Show("Thời gian đến phải sau thời gian đi.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             try
             {
-                bool success = flightScheduleBLL.AddFlightSchedule(routeId, departure, arrival, t1Qty, t2Qty, t1Booked, t2Booked, t1Price, t2Price);
+                bool success = flightScheduleBLL.AddFlightSchedule(flight);
 
                 if (success)
                 {

@@ -12,9 +12,21 @@ namespace DAO
 {
     public class DataProvider
     {
+        private static DataProvider instance;
+
+        public static DataProvider Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new DataProvider();
+                return instance;
+            }
+        }
+
         private SqlConnection cn;
         public DataProvider() {
-            string cnStr = @"Data Source=LAPTOP-I83CO42H\MAYAO;Initial Catalog=FlightManagement;Integrated Security=True";
+            string cnStr = @"Data Source=LAPTOP-JP71J78K\THIEN_NGAN;Initial Catalog=FlightManagement;Integrated Security=True";
             cn = new SqlConnection(cnStr);
         }
 

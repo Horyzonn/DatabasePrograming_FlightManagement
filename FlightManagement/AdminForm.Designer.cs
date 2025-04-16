@@ -37,8 +37,8 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlMainContent = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,6 +104,7 @@
             this.btnRule.TabIndex = 4;
             this.btnRule.Text = "Quy định";
             this.btnRule.UseVisualStyleBackColor = true;
+            this.btnRule.Click += new System.EventHandler(this.btnRule_Click);
             // 
             // btnSchedule
             // 
@@ -167,10 +168,18 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(99, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 55);
+            this.label1.Size = new System.Drawing.Size(133, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Admin";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pnlMainContent
+            // 
+            this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainContent.Location = new System.Drawing.Point(279, 0);
+            this.pnlMainContent.Name = "pnlMainContent";
+            this.pnlMainContent.Size = new System.Drawing.Size(763, 549);
+            this.pnlMainContent.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -182,17 +191,9 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pnlMainContent
-            // 
-            this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainContent.Location = new System.Drawing.Point(279, 0);
-            this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(763, 549);
-            this.pnlMainContent.TabIndex = 1;
-            // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1042, 549);

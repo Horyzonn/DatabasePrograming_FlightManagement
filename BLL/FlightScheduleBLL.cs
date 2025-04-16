@@ -21,18 +21,12 @@ namespace BLL
         {
             return flightScheduleDAO.GetAllFlightSchedules();
         }
-        public bool AddFlightSchedule(int routeId, DateTime departureTime, DateTime arrivalTime,
-                                      int ticket1Quantity, int ticket2Quantity,
-                                      int ticket1BookedQuantity, int ticket2BookedQuantity,
-                                      decimal ticket1Price, decimal ticket2Price)
+        public bool AddFlightSchedule(FlightSchedule flight)
         
         {
             try
             {
-                return flightScheduleDAO.AddFlightSchedule(routeId, departureTime, arrivalTime,
-                                                            ticket1Quantity, ticket2Quantity,
-                                                            ticket1BookedQuantity, ticket2BookedQuantity,
-                                                            ticket1Price, ticket2Price);
+                return flightScheduleDAO.AddFlightSchedule(flight);
 
             }
             catch (Exception ex)
@@ -53,18 +47,9 @@ namespace BLL
         }
 
 
-
-
-        public bool UpdateFlightSchedule(int id,int routeId, DateTime departureTime, DateTime arrivalTime,
-                                      int ticket1Quantity, int ticket2Quantity,
-                                      int ticket1BookedQuantity, int ticket2BookedQuantity,
-                                      decimal ticket1Price, decimal ticket2Price)
-        
+        public bool UpdateFlightSchedule(FlightSchedule flight)
         {
-                return flightScheduleDAO.UpdateFlightSchedule(id,routeId, departureTime, arrivalTime,
-                                                            ticket1Quantity, ticket2Quantity,
-                                                            ticket1BookedQuantity, ticket2BookedQuantity,
-                                                            ticket1Price, ticket2Price);
+                return flightScheduleDAO.UpdateFlightSchedule(flight);
         }
         
         public bool IsFlightScheduleExists(int id)

@@ -16,11 +16,9 @@ namespace DAO
             string sql = "INSERT INTO Routes ( DepartureAirport, ArrivalAirport) " +
                          "VALUES ( @Departure, @Arrival)";
             SqlParameter[] parameters = new SqlParameter[]
-            {
-               
-            new SqlParameter("@Departure", departureAirport),
-            new SqlParameter("@Arrival", arrivalAirport),
-            
+            {              
+                new SqlParameter("@Departure", departureAirport),
+                new SqlParameter("@Arrival", arrivalAirport)           
             };
 
             try
@@ -62,6 +60,13 @@ namespace DAO
             {
                 Disconnect();
             }
+        }
+        public bool HasRouteUsingAirport(string code)
+        {
+            string query = "SELECT COUNT(*) FROM Routes WHERE DepartureAirport = @code OR ArrivalAirport = @code";
+            SqlParameter[] parameters = { new SqlParameter("@code", code) };
+            int count = (int)DataProvider.Instance.ExeScalar(query, CommandType.Text, parameters);
+            return count > 0;
         }
 
         public bool DeleteRoute(string departure, string arrival)
