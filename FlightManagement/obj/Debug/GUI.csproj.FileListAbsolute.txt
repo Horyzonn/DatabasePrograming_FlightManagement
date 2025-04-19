@@ -40,5 +40,6 @@ D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightMan
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.FlightScheduleManagement.resources
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.PassengerManagement.resources
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.RulesManagement.resources
-D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.Up2Date
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.UsersManagementControl.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.CopyComplete

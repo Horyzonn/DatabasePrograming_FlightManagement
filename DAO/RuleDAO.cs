@@ -20,38 +20,57 @@ namespace DAO
 
         public bool UpdateRules(Rules rule)
         {
-            string sql = @"UPDATE Rules SET
-                            MinTimeFlight = @MinTimeFlight,
-                            TimeBookTicket = @TimeBookTicket,
-                            TimeBuyTicket = @TimeBuyTicket
-                            WHERE Id = @Id";
-
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-                new SqlParameter("@Id", rule.Id),
-                new SqlParameter("@MinTimeFlight", rule.MinTimeFlight),
-                new SqlParameter("@TimeBookTicket", rule.TimeBookTicket),
-                new SqlParameter("@TimeBuyTicket", rule.TimeBuyTicket),
-                //new SqlParameter("@AuthorId", rule.AuthorId)
-            };
-
             try
             {
                 Connect();
+
+                string checkSql = "SELECT COUNT(*) FROM Rules";
+                int count = (int)ExeScalar(checkSql, CommandType.Text);
+
+                string sql;
+                SqlParameter[] parameters;
+
+                if (count == 0)
+                {
+                    // INSERT nếu chưa có dòng nào
+                    sql = @"INSERT INTO Rules (MinTimeFlight, TimeBookTicket, TimeBuyTicket, AuthorID)
+                    VALUES (@MinTimeFlight, @TimeBookTicket, @TimeBuyTicket, @AuthorID)";
+                    parameters = new SqlParameter[]
+                    {
+                new SqlParameter("@MinTimeFlight", rule.MinTimeFlight),
+                new SqlParameter("@TimeBookTicket", rule.TimeBookTicket),
+                new SqlParameter("@TimeBuyTicket", rule.TimeBuyTicket),
+                new SqlParameter("@AuthorID", rule.AuthorId)
+                    };
+                }
+                else
+                {
+                    // UPDATE nếu đã có dòng — giới hạn 1 dòng, ví dụ Id = 1 (cần xác định rõ logic)
+                    sql = @"UPDATE Rules SET
+                        MinTimeFlight = @MinTimeFlight,
+                        TimeBookTicket = @TimeBookTicket,
+                        TimeBuyTicket = @TimeBuyTicket,
+                        AuthorID = @AuthorID
+                    WHERE Id = 1"; // Giả sử chỉ có 1 dòng với Id = 1
+                    parameters = new SqlParameter[]
+                    {
+                new SqlParameter("@MinTimeFlight", rule.MinTimeFlight),
+                new SqlParameter("@TimeBookTicket", rule.TimeBookTicket),
+                new SqlParameter("@TimeBuyTicket", rule.TimeBuyTicket),
+                new SqlParameter("@AuthorID", rule.AuthorId)
+                    };
+                }
+
                 int result = ExeNonQuery(sql, CommandType.Text, parameters);
                 return result > 0;
             }
             catch (SqlException ex)
             {
-                // Log lỗi SQL vào file log hoặc database để dễ dàng theo dõi và xử lý
-                throw new Exception("Lỗi khi cập nhật quy định: " + ex.Message);
-               
+                throw new Exception("Lỗi SQL khi cập nhật/insert quy định: " + ex.Message);
             }
             catch (Exception ex)
             {
-                // Xử lý các lỗi khác (không phải lỗi SQL)
                 throw new Exception("Đã xảy ra lỗi: " + ex.Message);
-                
             }
             finally
             {

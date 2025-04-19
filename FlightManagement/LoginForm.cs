@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 
 namespace FlightManagement
@@ -33,11 +34,11 @@ namespace FlightManagement
             registerForm.Show();
         }
 
-        private bool UserLogin(string username, string password)
+        private bool UserLogin(Users user)
         {
             try
             {
-                return loginBLL.Login(username, password);
+                return loginBLL.Login(user);
             }
             catch (Exception ex)
             {
@@ -48,11 +49,15 @@ namespace FlightManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text;
+            Users user = new Users()
+            {
+                Username = txtUsername.Text.Trim(),
+                Password = txtPassword.Text,
+            };
+            
 
             //Xử lí đầu vào
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!",
                               "Cảnh báo",
@@ -68,12 +73,15 @@ namespace FlightManagement
             }
             
 
-            if (UserLogin(username, password))
+            if (UserLogin(user))
             {
                 if (cbRole.Text == "Admin")
                 {
                     
                     MessageBox.Show("Đăng nhập thành công với quyền Admin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CurrentUser.Id = user.Id;
+                    CurrentUser.Username = user.Username;
+                    
                     AdminForm adminForm = new AdminForm();
                     adminForm.Show();
                 }

@@ -31,6 +31,7 @@ namespace FlightManagement.UserControls
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUpDate = new System.Windows.Forms.Button();
             this.txtMinTimeFlight = new System.Windows.Forms.TextBox();
             this.txtTimeBuy = new System.Windows.Forms.TextBox();
             this.txtTimeBook = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@ namespace FlightManagement.UserControls
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnUpDate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,19 @@ namespace FlightManagement.UserControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(780, 488);
             this.panel1.TabIndex = 0;
+            // 
+            // btnUpDate
+            // 
+            this.btnUpDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
+            this.btnUpDate.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpDate.ForeColor = System.Drawing.Color.White;
+            this.btnUpDate.Location = new System.Drawing.Point(76, 390);
+            this.btnUpDate.Name = "btnUpDate";
+            this.btnUpDate.Size = new System.Drawing.Size(206, 78);
+            this.btnUpDate.TabIndex = 3;
+            this.btnUpDate.Text = "Cập nhật";
+            this.btnUpDate.UseVisualStyleBackColor = false;
+            this.btnUpDate.Click += new System.EventHandler(this.btnUpDate_Click);
             // 
             // txtMinTimeFlight
             // 
@@ -118,22 +131,9 @@ namespace FlightManagement.UserControls
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(72, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 24);
+            this.label1.Size = new System.Drawing.Size(379, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Thời gian tối thiểu của chuyến bay";
-            // 
-            // btnUpDate
-            // 
-            this.btnUpDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
-            this.btnUpDate.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpDate.ForeColor = System.Drawing.Color.White;
-            this.btnUpDate.Location = new System.Drawing.Point(76, 390);
-            this.btnUpDate.Name = "btnUpDate";
-            this.btnUpDate.Size = new System.Drawing.Size(206, 78);
-            this.btnUpDate.TabIndex = 3;
-            this.btnUpDate.Text = "Cập nhật";
-            this.btnUpDate.UseVisualStyleBackColor = false;
-            this.btnUpDate.Click += new System.EventHandler(this.btnUpDate_Click);
+            this.label1.Text = "Thời gian tối thiểu của chuyến bay (phút)";
             // 
             // RulesManagement
             // 

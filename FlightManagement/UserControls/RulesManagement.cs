@@ -34,31 +34,32 @@ namespace FlightManagement.UserControls
 
         private void btnUpDate_Click(object sender, EventArgs e)
         {
-            Rules rule = new Rules
+            if (double.TryParse(txtMinTimeFlight.Text, out double minTimeFlight) &&
+                 double.TryParse(txtTimeBook.Text, out double timeBook) &&
+                 double.TryParse(txtTimeBuy.Text, out double timeBuy))
             {
-                Id = 1, // Giả sử chỉ có 1 dòng quy định
-                MinTimeFlight = double.Parse(txtMinTimeFlight.Text),
-                TimeBookTicket = double.Parse(txtTimeBook.Text),
-                TimeBuyTicket = double.Parse(txtTimeBuy.Text),
-                //CreatedAt = DateTime.Now,
-                //AuthorId = 1, // lấy từ người dùng đăng nhập
-            };
+                Rules rule = new Rules
+                {
+                    //Id = 1,
+                    MinTimeFlight = minTimeFlight,
+                    TimeBookTicket = timeBook,
+                    TimeBuyTicket = timeBuy,
+                    AuthorId=CurrentUser.Id
+                };
 
-            try
-            {
-                bool updated = ruleBLL.UpdateRules(rule);
-                MessageBox.Show(updated ? "Cập nhật thành công!" : "Cập nhật thất bại.");
+                try
+                {
+                    bool updated = ruleBLL.UpdateRules(rule);
+                    MessageBox.Show(updated ? "Cập nhật thành công!" : "Cập nhật thất bại.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                }
             }
-
-            catch (FormatException ex)
+            else
             {
-                // Lỗi khi người dùng nhập dữ liệu không hợp lệ
-                MessageBox.Show("Lỗi định dạng dữ liệu: " + ex.Message);
-            }
-    catch (Exception ex)
-    {
-                // Lỗi chung khi xảy ra bất kỳ lỗi nào
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                MessageBox.Show("Vui lòng nhập đúng định dạng số.");
             }
         }
     }

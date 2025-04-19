@@ -5,18 +5,19 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
 namespace DAO
 {
     public class LoginDAO : DataProvider
     {
-        public bool Login(string username, string password)
+        public bool Login(Users user)
         {
             string sql = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@Username", username),
-                new SqlParameter("@Password", password),
+                new SqlParameter("@Username", user.Username),
+                new SqlParameter("@Password", user.Password),
                
             };
             try
