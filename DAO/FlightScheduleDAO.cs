@@ -93,14 +93,15 @@ namespace DAO
                         WHERE Id = @Id";
 
             SqlParameter[] parameters = new SqlParameter[]
-            {              
+            {
+                new SqlParameter("@Id", flight.Id),
                 new SqlParameter("@RouteId", flight.RouteId),
                 new SqlParameter("@DepartureTime",flight.DepartureTime),
                 new SqlParameter("@ArrivalTime", flight.ArrivalTime),
                 new SqlParameter("@Ticket1Quantity", flight.Ticket1Quantity ),
                 new SqlParameter("@Ticket2Quantity", flight.Ticket2Quantity),
                 new SqlParameter("@Ticket1BookedQuantity",flight.Ticket1BookedQuantity ),
-                new SqlParameter("@Ticket2BookedQuantity",flight.Ticket1BookedQuantity),
+                new SqlParameter("@Ticket2BookedQuantity",flight.Ticket2BookedQuantity),
                 new SqlParameter("@Ticket1Price", flight.Ticket1Price ),
                 new SqlParameter("@Ticket2Price", flight.Ticket2Price )
             };
@@ -144,5 +145,8 @@ namespace DAO
                 Disconnect();
             }
         }
+
+
+
     }
 }

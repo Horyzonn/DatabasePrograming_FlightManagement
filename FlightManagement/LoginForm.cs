@@ -66,24 +66,33 @@ namespace FlightManagement
                 MessageBox.Show("Vui lòng chọn quyền truy cập!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            
 
             if (UserLogin(username, password))
             {
-                if(cbRole.Text == "Admin")
+                if (cbRole.Text == "Admin")
                 {
+                    
+                    MessageBox.Show("Đăng nhập thành công với quyền Admin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AdminForm adminForm = new AdminForm();
                     adminForm.Show();
                 }
                 else if (cbRole.Text == "Nhân viên")
                 {
+                    
                     MessageBox.Show("Đăng nhập thành công với quyền Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AdminForm adminForm = new AdminForm();
+                    adminForm.Show();
                 }
                 else if (cbRole.Text == "Khách hàng")
                 {
+                    
                     MessageBox.Show("Đăng nhập thành công với quyền Khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AdminForm adminForm = new AdminForm();
+                    adminForm.Show();
                 }
                 else
-                {
+                { 
                     MessageBox.Show("Quyền truy cập không hợp lệ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }

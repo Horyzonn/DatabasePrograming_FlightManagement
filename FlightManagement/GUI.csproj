@@ -96,6 +96,12 @@
     <Compile Include="UserControls\RulesManagement.Designer.cs">
       <DependentUpon>RulesManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UsersManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UsersManagementControl.Designer.cs">
+      <DependentUpon>UsersManagementControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\RulesManagement.resx">
       <DependentUpon>RulesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UsersManagementControl.resx">
+      <DependentUpon>UsersManagementControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

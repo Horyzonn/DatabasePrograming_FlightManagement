@@ -25,7 +25,7 @@ namespace DTO
 
         public Passengers(int id,string fullName, DateTime dayOfBirth, string gender, int? passportNumber, string nationality, string email, string phoneNumber) 
         {
-            id = Id;
+            Id = id;
             DayOfBirth = dayOfBirth;
             Gender = gender;
             PassportNumber = passportNumber;

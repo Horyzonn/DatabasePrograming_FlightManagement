@@ -38,9 +38,10 @@ namespace FlightManagement
             loginForm.Show(); // Hiện lại form đăng nhập
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnAccount_Click(object sender, EventArgs e)
         {
-
+            LoadUserControl(new UsersManagementControl());
+            HighlightButton(btnAccount);
         }
 
 

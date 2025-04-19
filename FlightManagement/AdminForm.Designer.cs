@@ -89,7 +89,7 @@
             this.btnAccount.TabIndex = 5;
             this.btnAccount.Text = "Tài khoản";
             this.btnAccount.UseVisualStyleBackColor = true;
-            this.btnAccount.Click += new System.EventHandler(this.button4_Click);
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnRule
             // 
