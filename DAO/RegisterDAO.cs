@@ -30,6 +30,44 @@ namespace DAO
             }
         }
 
+        public bool IsEmailTaken(string email)
+        {
+            string sql = "SELECT COUNT(*) FROM Users WHERE Email = @Email";
+            SqlParameter[] parameters =
+            {
+            new SqlParameter("@Email", email)
+            };
+
+            try
+            {
+                int count = (int)ExeScalar(sql, CommandType.Text, parameters);
+                return count > 0;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi khi kiểm tra email: " + ex.Message, ex);
+            }
+        }
+
+        public bool IsPhoneNumberTaken(string phone)
+        {
+            string sql = "SELECT COUNT(*) FROM Users WHERE PhoneNumber = @PhoneNumber";
+            SqlParameter[] parameters =
+            {
+            new SqlParameter("@PhoneNumber", phone)
+            };
+
+            try
+            {
+                int count = (int)ExeScalar(sql, CommandType.Text, parameters);
+                return count > 0;
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Lỗi khi kiểm tra số điện thoại: " + ex.Message, ex);
+            }
+        }
+
         public bool RegisterUser(Users user)
         {
             string sql = @"INSERT INTO Users 
@@ -48,8 +86,7 @@ namespace DAO
             new SqlParameter("@Email", user.Email),
             new SqlParameter("@PhoneNumber", user.PhoneNumber),
             new SqlParameter("@UserRole", user.UserRole),
-            //new SqlParameter("@FirstName", user.FirstName),
-            //new SqlParameter("@LastName", user.LastName)
+           
             };
 
             try

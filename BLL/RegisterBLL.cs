@@ -29,11 +29,20 @@ namespace BLL
                 throw new Exception("Tên đăng nhập và mật khẩu không được để trống.");
             }
 
+            if (registerDAO.IsEmailTaken(user.Email))
+            {
+                throw new Exception("Email đã tồn tại.");
+            }
+
             if (registerDAO.IsUsernameTaken(user.Username))
             {
                 throw new Exception("Tên đăng nhập đã tồn tại.");
             }
 
+            if (registerDAO.IsPhoneNumberTaken(user.PhoneNumber))
+            {
+                throw new Exception("Số điện thoại đã tồn tại.");
+            }
             return registerDAO.RegisterUser(user);
         }
     }
