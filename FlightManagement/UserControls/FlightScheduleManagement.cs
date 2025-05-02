@@ -47,7 +47,7 @@ namespace FlightManagement.UserControls
         {
             FlightSchedule flight = new FlightSchedule()
             {
-                RouteId = Convert.ToInt32(cbRouteId.SelectedValue),
+                
                 DepartureTime = dtpDeparture.Value,
                 ArrivalTime = dtpArrival.Value,
                 Ticket1Quantity = (int)numTicket1Qty.Value,

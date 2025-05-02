@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.HttpUtility, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.HttpUtility.1.0.0.1\lib\net40\Mono.HttpUtility.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +47,7 @@
     <Compile Include="AirportBLL.cs" />
     <Compile Include="FlightScheduleBLL.cs" />
     <Compile Include="PassengersBLL.cs" />
+    <Compile Include="PaymentRequest.cs" />
     <Compile Include="RouteBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="PasswordHelper.cs" />
@@ -51,7 +55,9 @@
     <Compile Include="RegisterBLL.cs" />
     <Compile Include="ResetPassBLL.cs" />
     <Compile Include="RuleBLL.cs" />
+    <Compile Include="TicketBLL.cs" />
     <Compile Include="UsersBLL.cs" />
+    <Compile Include="VNPayService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">
@@ -62,6 +68,9 @@
       <Project>{2754f815-c55b-4b45-bf83-eec9b1a09ae4}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

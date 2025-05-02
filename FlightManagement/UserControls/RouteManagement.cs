@@ -222,5 +222,15 @@ namespace FlightManagement.User_Control
                 cbArrAirport.SelectedIndex = 0;
            
         }
+
+        private void cbDepAirport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvAirports_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

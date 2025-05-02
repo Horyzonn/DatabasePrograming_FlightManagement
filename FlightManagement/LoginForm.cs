@@ -51,8 +51,8 @@ namespace FlightManagement
         {
             Users user = new Users()
             {
-                Username = txtUsername.Text.Trim(),
-                Password = txtPassword.Text,
+                Username = "guest1",
+                Password = "123"
             };
             
 
@@ -78,7 +78,6 @@ namespace FlightManagement
                 if (cbRole.Text == "Admin")
                 {
                     
-                    MessageBox.Show("Đăng nhập thành công với quyền Admin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CurrentUser.Id = user.Id;
                     CurrentUser.Username = user.Username;
                     
@@ -89,15 +88,16 @@ namespace FlightManagement
                 {
                     
                     MessageBox.Show("Đăng nhập thành công với quyền Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AdminForm adminForm = new AdminForm();
-                    adminForm.Show();
+                    
                 }
                 else if (cbRole.Text == "Khách hàng")
                 {
-                    
-                    MessageBox.Show("Đăng nhập thành công với quyền Khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AdminForm adminForm = new AdminForm();
-                    adminForm.Show();
+
+                    CurrentUser.Id = user.Id;
+                    CurrentUser.Username = user.Username;
+
+                    GuestForm guestForm = new GuestForm();
+                    guestForm.Show();
                 }
                 else
                 { 

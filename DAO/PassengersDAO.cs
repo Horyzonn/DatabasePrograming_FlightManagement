@@ -11,6 +11,15 @@ namespace DAO
 {
     public class PassengersDAO: DataProvider
     {
+        public DataTable GetPassergerID(int quantity)
+        {
+            string sql = "SELECT TOP (@quantity) p.ID FROM Passengers p ORDER BY p.ID DESC";
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@quantity", quantity)
+            };
+            return ExeQuery(sql, CommandType.Text, parameters);
+        }
         public DataTable GetAllPassengers()
         {
             string sql = "SELECT * FROM Passengers";
@@ -19,7 +28,7 @@ namespace DAO
         public bool AddPassenger(Passengers passenger)
         {
             string sql = @"INSERT INTO Passengers 
-                           (FullName, DayOfBirth, Gender, PassportNumber, Nationality, Email, PhoneNumber)
+                           (FullName, DateOfBirth, Gender, PassportNumber, Nationality, Email, PhoneNumber)
                            VALUES 
                            (@FullName, @DayOfBirth, @Gender, @PassportNumber, @Nationality, @Email, @PhoneNumber)";
 
@@ -28,7 +37,7 @@ namespace DAO
                 new SqlParameter("@FullName", passenger.FullName),
                 new SqlParameter("@DayOfBirth", passenger.DayOfBirth),
                 new SqlParameter("@Gender", passenger.Gender),
-                new SqlParameter("@PassportNumber", (object)passenger.PassportNumber ?? DBNull.Value),
+                new SqlParameter("@PassportNumber", passenger.PassportNumber),
                 new SqlParameter("@Nationality", passenger.Nationality),
                 new SqlParameter("@Email", passenger.Email),
                 new SqlParameter("@PhoneNumber", passenger.PhoneNumber)

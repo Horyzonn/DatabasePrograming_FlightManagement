@@ -17,6 +17,7 @@ namespace BLL
             flightScheduleDAO = new FlightScheduleDAO();
         }
 
+
         public DataTable GetAllFlightSchedules()
         {
             return flightScheduleDAO.GetAllFlightSchedules();
@@ -57,5 +58,16 @@ namespace BLL
             return flightScheduleDAO.IsFlightScheduleExists(id);
         }
 
+        public DataTable GetFlightStandard(string dep, string arr, DateTime date)
+        {
+            try
+            {
+                return flightScheduleDAO.GetFlightStandard(dep, arr, date);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving standard ticket: " + ex.Message, ex);
+            }
+        }
     }
 }

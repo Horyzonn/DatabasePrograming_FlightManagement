@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtAirportLoc = new System.Windows.Forms.TextBox();
@@ -197,6 +196,7 @@
             this.cbDepAirport.Name = "cbDepAirport";
             this.cbDepAirport.Size = new System.Drawing.Size(251, 36);
             this.cbDepAirport.TabIndex = 16;
+            this.cbDepAirport.SelectedIndexChanged += new System.EventHandler(this.cbDepAirport_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -216,7 +216,7 @@
             this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, 216);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(305, 397);
+            this.panel2.Size = new System.Drawing.Size(391, 397);
             this.panel2.TabIndex = 16;
             // 
             // dgvAirports
@@ -230,21 +230,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAirports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAirports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAirports.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAirports.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAirports.Location = new System.Drawing.Point(0, 34);
             this.dgvAirports.Name = "dgvAirports";
             this.dgvAirports.RowHeadersWidth = 51;
             this.dgvAirports.RowTemplate.Height = 24;
-            this.dgvAirports.Size = new System.Drawing.Size(305, 363);
+            this.dgvAirports.Size = new System.Drawing.Size(391, 363);
             this.dgvAirports.TabIndex = 1;
+            this.dgvAirports.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAirports_CellContentClick);
             // 
             // panel4
             // 
@@ -252,14 +245,14 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(305, 34);
+            this.panel4.Size = new System.Drawing.Size(391, 34);
             this.panel4.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(107, 3);
+            this.label7.Location = new System.Drawing.Point(125, 3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 24);
             this.label7.TabIndex = 1;
@@ -271,9 +264,9 @@
             this.panel3.Controls.Add(this.dgvRoutes);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(305, 216);
+            this.panel3.Location = new System.Drawing.Point(391, 216);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(758, 397);
+            this.panel3.Size = new System.Drawing.Size(672, 397);
             this.panel3.TabIndex = 17;
             // 
             // dgvRoutes
@@ -284,7 +277,7 @@
             this.dgvRoutes.Name = "dgvRoutes";
             this.dgvRoutes.RowHeadersWidth = 51;
             this.dgvRoutes.RowTemplate.Height = 24;
-            this.dgvRoutes.Size = new System.Drawing.Size(758, 363);
+            this.dgvRoutes.Size = new System.Drawing.Size(672, 363);
             this.dgvRoutes.TabIndex = 1;
             // 
             // panel5
@@ -293,7 +286,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(758, 34);
+            this.panel5.Size = new System.Drawing.Size(672, 34);
             this.panel5.TabIndex = 0;
             // 
             // label8

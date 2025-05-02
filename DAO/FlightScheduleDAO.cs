@@ -146,6 +146,18 @@ namespace DAO
             }
         }
 
+        public DataTable GetFlightStandard(string dep, string arr, DateTime date)
+        {
+            string sql = "SELECT fs.* FROM FlightSchedule fs JOIN Routes r ON fs.RouteID = r.ID WHERE r.DepartureAirport = @dep  AND r.ArrivalAirport = @arr  AND CAST(fs.DepartureTime AS DATE) = @date;";
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@dep", dep),
+                new SqlParameter("@arr", arr),
+                new SqlParameter("@date", date)
+            };
+            return ExeQuery(sql, CommandType.Text, parameters);
+        }
+
 
 
     }

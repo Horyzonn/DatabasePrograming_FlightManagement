@@ -16,6 +16,19 @@ namespace BLL
         {
             passengersDAO = new PassengersDAO();
         }
+
+        public List<int> GetPassengerIDList(int quantity)
+        {
+            DataTable dt = passengersDAO.GetPassergerID(quantity);
+            List<int> passengerIDs = new List<int>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                passengerIDs.Add(Convert.ToInt32(row["ID"]));
+            }
+
+            return passengerIDs;
+        }
         public DataTable GetAllPassengers()
         {
             return passengersDAO.GetAllPassengers();

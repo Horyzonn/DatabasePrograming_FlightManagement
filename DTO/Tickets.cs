@@ -9,7 +9,6 @@ namespace DTO
     public class Tickets
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
         public int FlightScheduleId { get; set; }
         public int PassengerId { get; set; }
         public int Type { get; set; }
@@ -20,7 +19,6 @@ namespace DTO
         public Tickets(int id, int userId, int flightScheduleId, int passengerId, int type, decimal price, DateTime? createdDate, int? extraPackage)
         {
             this.Id = id;
-            this.UserId = userId;
             this.FlightScheduleId = flightScheduleId;
             this.PassengerId = passengerId;
             this.Type = type;
@@ -28,6 +26,18 @@ namespace DTO
             this.CreatedDate = createdDate;
             this.ExtraPackage = extraPackage;
         }
+
+        public Tickets(int flightScheduleId, int passengerId, int type, decimal price, DateTime? createdDate, int? extraPackage)
+        {
+            
+            this.FlightScheduleId = flightScheduleId;
+            this.PassengerId = passengerId;
+            this.Type = type;
+            this.Price = price;
+            this.CreatedDate = createdDate;
+            this.ExtraPackage = extraPackage;
+        }
+
         public Tickets()
         {
             // Default constructor
