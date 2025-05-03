@@ -34,7 +34,7 @@ namespace FlightManagement
             registerForm.Show();
         }
 
-        private bool UserLogin(Users user)
+        private Users UserLogin(Users user)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace FlightManagement
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi đăng nhập: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                return null;
             }
         }
 
@@ -51,10 +51,10 @@ namespace FlightManagement
         {
             Users user = new Users()
             {
-                Username = txtUsername.Text,
-                Password = txtPassword.Text
+                Username = txtUsername.Text.Trim(),
+                Password = txtPassword.Text,
             };
-            
+
 
             //Xử lí đầu vào
             if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password))
@@ -71,36 +71,30 @@ namespace FlightManagement
                 MessageBox.Show("Vui lòng chọn quyền truy cập!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
 
-            if (UserLogin(user))
+            Users userFromDb = UserLogin(user);
+            if (userFromDb != null)
             {
+                CurrentUser.Id = userFromDb.Id;
+                CurrentUser.Username = userFromDb.Username;
                 if (cbRole.Text == "Admin")
                 {
-                    
-                    CurrentUser.Id = user.Id;
-                    CurrentUser.Username = user.Username;
-                    
                     AdminForm adminForm = new AdminForm();
                     adminForm.Show();
                 }
                 else if (cbRole.Text == "Nhân viên")
                 {
-                    
+
                     MessageBox.Show("Đăng nhập thành công với quyền Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                 }
                 else if (cbRole.Text == "Khách hàng")
                 {
-
-                    CurrentUser.Id = user.Id;
-                    CurrentUser.Username = user.Username;
-
                     GuestForm guestForm = new GuestForm();
                     guestForm.Show();
                 }
                 else
-                { 
+                {
                     MessageBox.Show("Quyền truy cập không hợp lệ!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }

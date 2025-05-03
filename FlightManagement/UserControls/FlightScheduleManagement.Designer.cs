@@ -33,9 +33,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.dtpDeparture = new System.Windows.Forms.DateTimePicker();
             this.dtpArrival = new System.Windows.Forms.DateTimePicker();
@@ -45,17 +43,19 @@
             this.numTicket1Qty = new System.Windows.Forms.NumericUpDown();
             this.numTicket2Qty = new System.Windows.Forms.NumericUpDown();
             this.numT1Price = new System.Windows.Forms.NumericUpDown();
-            this.numT1Booked = new System.Windows.Forms.NumericUpDown();
-            this.numT2Booked = new System.Windows.Forms.NumericUpDown();
             this.numT2Price = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.cbRouteId = new System.Windows.Forms.ComboBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartureAirport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArrivalAirport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RouteID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartureTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFlightSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTicket1Qty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTicket2Qty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numT1Price)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numT1Booked)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numT2Booked)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numT2Price)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,45 +110,25 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Số lượng vé loại 2:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(451, 179);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 24);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Số lượng đã đặt:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(451, 220);
+            this.label9.Location = new System.Drawing.Point(462, 190);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 24);
+            this.label9.Size = new System.Drawing.Size(178, 24);
             this.label9.TabIndex = 8;
-            this.label9.Text = "Gía vé loại 2:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(451, 140);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(158, 24);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Số lượng đã đặt:";
+            this.label9.Text = "Nhập giá vé loại 2:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(68, 222);
+            this.label11.Location = new System.Drawing.Point(462, 148);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(128, 24);
+            this.label11.Size = new System.Drawing.Size(178, 24);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Gía vé loại 1:";
+            this.label11.Text = "Nhập giá vé loại 1:";
             // 
             // dtpDeparture
             // 
@@ -199,6 +179,13 @@
             // dgvFlightSchedule
             // 
             this.dgvFlightSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFlightSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.DepartureAirport,
+            this.ArrivalAirport,
+            this.RouteID,
+            this.DepartureTime,
+            this.ArrivalTime});
             this.dgvFlightSchedule.Location = new System.Drawing.Point(3, 318);
             this.dgvFlightSchedule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvFlightSchedule.Name = "dgvFlightSchedule";
@@ -229,34 +216,16 @@
             // numT1Price
             // 
             this.numT1Price.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numT1Price.Location = new System.Drawing.Point(266, 220);
+            this.numT1Price.Location = new System.Drawing.Point(668, 146);
             this.numT1Price.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numT1Price.Name = "numT1Price";
             this.numT1Price.Size = new System.Drawing.Size(141, 32);
             this.numT1Price.TabIndex = 28;
             // 
-            // numT1Booked
-            // 
-            this.numT1Booked.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numT1Booked.Location = new System.Drawing.Point(668, 140);
-            this.numT1Booked.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numT1Booked.Name = "numT1Booked";
-            this.numT1Booked.Size = new System.Drawing.Size(143, 32);
-            this.numT1Booked.TabIndex = 29;
-            // 
-            // numT2Booked
-            // 
-            this.numT2Booked.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numT2Booked.Location = new System.Drawing.Point(668, 182);
-            this.numT2Booked.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numT2Booked.Name = "numT2Booked";
-            this.numT2Booked.Size = new System.Drawing.Size(143, 32);
-            this.numT2Booked.TabIndex = 30;
-            // 
             // numT2Price
             // 
             this.numT2Price.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numT2Price.Location = new System.Drawing.Point(668, 220);
+            this.numT2Price.Location = new System.Drawing.Point(669, 190);
             this.numT2Price.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numT2Price.Name = "numT2Price";
             this.numT2Price.Size = new System.Drawing.Size(143, 32);
@@ -282,13 +251,62 @@
             this.cbRouteId.Size = new System.Drawing.Size(144, 32);
             this.cbRouteId.TabIndex = 12;
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "ID";
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // DepartureAirport
+            // 
+            this.DepartureAirport.DataPropertyName = "DepartureAirport";
+            this.DepartureAirport.HeaderText = "Sân bay đi";
+            this.DepartureAirport.MinimumWidth = 6;
+            this.DepartureAirport.Name = "DepartureAirport";
+            this.DepartureAirport.Width = 125;
+            // 
+            // ArrivalAirport
+            // 
+            this.ArrivalAirport.DataPropertyName = "ArrivalAirport";
+            this.ArrivalAirport.HeaderText = "Sân bay đến";
+            this.ArrivalAirport.MinimumWidth = 6;
+            this.ArrivalAirport.Name = "ArrivalAirport";
+            this.ArrivalAirport.Width = 125;
+            // 
+            // RouteID
+            // 
+            this.RouteID.DataPropertyName = "RouteID";
+            this.RouteID.HeaderText = "RouteId";
+            this.RouteID.MinimumWidth = 6;
+            this.RouteID.Name = "RouteID";
+            this.RouteID.Visible = false;
+            this.RouteID.Width = 125;
+            // 
+            // DepartureTime
+            // 
+            this.DepartureTime.DataPropertyName = "DepartureTime";
+            this.DepartureTime.HeaderText = "Thời gian đi";
+            this.DepartureTime.MinimumWidth = 6;
+            this.DepartureTime.Name = "DepartureTime";
+            this.DepartureTime.Visible = false;
+            this.DepartureTime.Width = 125;
+            // 
+            // ArrivalTime
+            // 
+            this.ArrivalTime.DataPropertyName = "ArrivalTime";
+            this.ArrivalTime.HeaderText = "Thời gian đến";
+            this.ArrivalTime.MinimumWidth = 6;
+            this.ArrivalTime.Name = "ArrivalTime";
+            this.ArrivalTime.Visible = false;
+            this.ArrivalTime.Width = 125;
+            // 
             // FlightScheduleManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.numT2Price);
-            this.Controls.Add(this.numT2Booked);
-            this.Controls.Add(this.numT1Booked);
             this.Controls.Add(this.numT1Price);
             this.Controls.Add(this.numTicket2Qty);
             this.Controls.Add(this.numTicket1Qty);
@@ -299,9 +317,7 @@
             this.Controls.Add(this.dtpDeparture);
             this.Controls.Add(this.cbRouteId);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -316,8 +332,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numTicket1Qty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTicket2Qty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numT1Price)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numT1Booked)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numT2Booked)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numT2Price)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,9 +345,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dtpDeparture;
         private System.Windows.Forms.DateTimePicker dtpArrival;
@@ -343,10 +355,14 @@
         private System.Windows.Forms.NumericUpDown numTicket1Qty;
         private System.Windows.Forms.NumericUpDown numTicket2Qty;
         private System.Windows.Forms.NumericUpDown numT1Price;
-        private System.Windows.Forms.NumericUpDown numT1Booked;
-        private System.Windows.Forms.NumericUpDown numT2Booked;
         private System.Windows.Forms.NumericUpDown numT2Price;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbRouteId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DepartureAirport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ArrivalAirport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RouteID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DepartureTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ArrivalTime;
     }
 }

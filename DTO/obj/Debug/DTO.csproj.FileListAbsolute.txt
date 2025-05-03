@@ -18,3 +18,5 @@ D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\DTO\ob
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.pdb
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\DTO\bin\Debug\Mono.HttpUtility.dll
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.csproj.Up2Date
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\bin\Debug\Mono.HttpUtility.dll
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.csproj.Up2Date

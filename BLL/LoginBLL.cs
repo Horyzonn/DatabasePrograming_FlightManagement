@@ -15,7 +15,7 @@ namespace BLL
             loginDAO = new LoginDAO();
        }
         
-        public bool Login(Users user)
+        public Users Login(Users user)
         {
             try
             {

@@ -13,7 +13,24 @@ namespace DAO
     {
         public DataTable GetAllFlightSchedules()
         {
-            string sql = "SELECT * FROM FlightSchedule";
+            //  string sql = "SELECT * FROM FlightSchedule";
+            string sql = @"
+SELECT 
+    fs.ID AS Id,
+    fs.RouteID,
+    da.Name AS DepartureAirport,
+    aa.Name AS ArrivalAirport,
+    fs.DepartureTime,
+    fs.ArrivalTime
+FROM 
+    FlightSchedule fs
+JOIN 
+    Routes r ON fs.RouteID = r.RouteID
+JOIN 
+    Airports da ON r.DepartureAirport = da.Code
+JOIN 
+    Airports aa ON r.ArrivalAirport = aa.Code";
+
             return ExeQuery(sql, CommandType.Text);
         }
 
@@ -79,15 +96,15 @@ namespace DAO
         {
 
             string sql = @"INSERT INTO FlightSchedule 
-                        (RouteId, DepartureTime, ArrivalTime, Ticket1Quantity, Ticket2Quantity, 
+                        (RouteID, DepartureTime, ArrivalTime, Ticket1Quantity, Ticket2Quantity, 
                          Ticket1BookedQuantity, Ticket2BookedQuantity, Ticket1Price, Ticket2Price)
                         VALUES 
-                        (@RouteId, @DepartureTime, @ArrivalTime, @Ticket1Quantity, @Ticket2Quantity, 
+                        (@RouteID, @DepartureTime, @ArrivalTime, @Ticket1Quantity, @Ticket2Quantity, 
                          @Ticket1BookedQuantity, @Ticket2BookedQuantity, @Ticket1Price, @Ticket2Price)";
 
             SqlParameter[] parameters = new SqlParameter[]
             {                
-                new SqlParameter("@RouteId", flight.RouteId),
+                new SqlParameter("@RouteID", flight.RouteID),
                 new SqlParameter("@DepartureTime",flight.DepartureTime),
                 new SqlParameter("@ArrivalTime", flight.ArrivalTime),
                 new SqlParameter("@Ticket1Quantity", flight.Ticket1Quantity ),
@@ -115,10 +132,10 @@ namespace DAO
 
         public bool DeleteFlightSchedule(int id)
         {
-            string sql = "DELETE FROM FlightSchedule WHERE Id = @Id";
+            string sql = "DELETE FROM FlightSchedule WHERE ID = @ID";
             SqlParameter[] parameters = 
             {
-                new SqlParameter("@Id", id)
+                new SqlParameter("@ID", id)
             };
 
             try
@@ -137,56 +154,13 @@ namespace DAO
             }
         }
 
-        public bool UpdateFlightSchedule(FlightSchedule flight)
-        {
-            string sql = @"UPDATE FlightSchedule SET                          
-                            RouteId = @RouteId,
-                            DepartureTime = @DepartureTime,
-                            ArrivalTime = @ArrivalTime,
-                            Ticket1Quantity = @Ticket1Quantity,
-                            Ticket2Quantity = @Ticket2Quantity,
-                            Ticket1BookedQuantity = @Ticket1BookedQuantity,
-                            Ticket2BookedQuantity = @Ticket2BookedQuantity,
-                            Ticket1Price = @Ticket1Price,
-                            Ticket2Price = @Ticket2Price
-                        WHERE Id = @Id";
-
-            SqlParameter[] parameters = new SqlParameter[]
-            {
-                new SqlParameter("@Id", flight.Id),
-                new SqlParameter("@RouteId", flight.RouteId),
-                new SqlParameter("@DepartureTime",flight.DepartureTime),
-                new SqlParameter("@ArrivalTime", flight.ArrivalTime),
-                new SqlParameter("@Ticket1Quantity", flight.Ticket1Quantity ),
-                new SqlParameter("@Ticket2Quantity", flight.Ticket2Quantity),
-                new SqlParameter("@Ticket1BookedQuantity",flight.Ticket1BookedQuantity ),
-                new SqlParameter("@Ticket2BookedQuantity",flight.Ticket2BookedQuantity),
-                new SqlParameter("@Ticket1Price", flight.Ticket1Price ),
-                new SqlParameter("@Ticket2Price", flight.Ticket2Price )
-            };
-
-            try
-            {
-                Connect();
-                int result = ExeNonQuery(sql, CommandType.Text, parameters);
-                return result > 0;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi cập nhật lịch bay: " + ex.Message);
-            }
-            finally
-            {
-                Disconnect();
-            }
-        }
 
         public bool IsFlightScheduleExists(int id)
         {
-            string sql = "SELECT COUNT(*) FROM FlightSchedule WHERE Id = @Id";
+            string sql = "SELECT COUNT(*) FROM FlightSchedule WHERE ID = @ID";
             SqlParameter[] parameters = 
             {
-                new SqlParameter("@Id", id)
+                new SqlParameter("@ID", id)
             };
 
             try

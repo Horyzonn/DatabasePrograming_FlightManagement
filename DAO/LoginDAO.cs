@@ -11,25 +11,37 @@ namespace DAO
 {
     public class LoginDAO : DataProvider
     {
-        public bool Login(Users user)
+        public Users Login(Users user)
         {
-            string sql = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
+            string sql = "SELECT TOP 1 * FROM Users WHERE Username = @Username AND Password = @Password";
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@Username", user.Username),
-                new SqlParameter("@Password", user.Password),
-               
+        new SqlParameter("@Username", user.Username),
+        new SqlParameter("@Password", user.Password),
             };
+
             try
             {
-                int count = (int)ExeScalar(sql, CommandType.Text, parameters);
-                return count > 0;
+                using (SqlDataReader reader = ExeReader(sql, CommandType.Text, parameters))
+                {
+                    if (reader.Read())
+                    {
+                        return new Users
+                        {
+                            Id = Convert.ToInt32(reader["ID"]),
+                            Username = reader["Username"].ToString(),
+                            UserRole = reader["UserRole"].ToString()
+
+                        };
+                    }
+                }
+
+                return null; // Đăng nhập thất bại
             }
             catch (SqlException ex)
             {
                 throw new Exception("Lỗi khi kiểm tra đăng nhập: " + ex.Message, ex);
             }
-
         }
     }
 }

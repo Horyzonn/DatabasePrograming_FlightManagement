@@ -25,8 +25,11 @@ namespace FlightManagement.UserControls
         {
             DataTable dt = ruleBLL.GetRules();
             if (dt.Rows.Count > 0)
-            {               
+            {
                 txtMinTimeFlight.Text = dt.Rows[0]["MinTimeFlight"].ToString();
+                txtMaxQuantityBetweenAirport.Text = dt.Rows[0]["MaxQuantityBetweenAirport"].ToString();
+                txtMinTimeStayAirport.Text = dt.Rows[0]["MinTimeStayAirport"].ToString();
+                txtMaxTimeStayAirport.Text = dt.Rows[0]["MaxTimeStayAirport"].ToString();
                 txtTimeBook.Text = dt.Rows[0]["TimeBookTicket"].ToString();
                 txtTimeBuy.Text = dt.Rows[0]["TimeBuyTicket"].ToString();
             }
@@ -36,15 +39,21 @@ namespace FlightManagement.UserControls
         {
             if (double.TryParse(txtMinTimeFlight.Text, out double minTimeFlight) &&
                  double.TryParse(txtTimeBook.Text, out double timeBook) &&
-                 double.TryParse(txtTimeBuy.Text, out double timeBuy))
+                 double.TryParse(txtTimeBuy.Text, out double timeBuy) &&
+                 int.TryParse(txtMaxQuantityBetweenAirport.Text, out int maxQuantityBetweenAirport) &&
+                 double.TryParse(txtMinTimeStayAirport.Text, out double minTimeStayAirport) &&
+                 double.TryParse(txtMaxTimeStayAirport.Text, out double maxTimeStayAirport))
             {
                 Rules rule = new Rules
                 {
                     //Id = 1,
                     MinTimeFlight = minTimeFlight,
+                    MaxQuantityBetweenAirport = maxQuantityBetweenAirport,
+                    MinTimeStayAirport = minTimeStayAirport,
+                    MaxTimeStayAirport = maxTimeStayAirport,
                     TimeBookTicket = timeBook,
                     TimeBuyTicket = timeBuy,
-                    AuthorId=CurrentUser.Id
+                    AuthorId = CurrentUser.Id
                 };
 
                 try
@@ -61,6 +70,21 @@ namespace FlightManagement.UserControls
             {
                 MessageBox.Show("Vui lòng nhập đúng định dạng số.");
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void RulesManagement_Load(object sender, EventArgs e)
+        {
+            LoadRules();
+        }
+
+        private void RulesManagement_Load_1(object sender, EventArgs e)
+        {
+            LoadRules();
         }
     }
 }

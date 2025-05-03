@@ -72,7 +72,7 @@ namespace BLL
         }
 
 
-        public bool UpdateFlightSchedule(FlightSchedule flight)
+    /*    public bool UpdateFlightSchedule(FlightSchedule flight)
         {
                 return flightScheduleDAO.UpdateFlightSchedule(flight);
         }
@@ -81,7 +81,7 @@ namespace BLL
         {
             return flightScheduleDAO.IsFlightScheduleExists(id);
         }
-
+*/
         public DataTable GetFlightStandard(string dep, string arr, DateTime date)
         {
             try

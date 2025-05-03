@@ -1,37 +1,85 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\",
+  "WorkspaceRootPath": "D:\\QLCB\\DatabasePrograming_FlightManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|d:\\users\\pc\\desktop\\ou\\ltcsdl\\project\\databaseprograming_flightmanagement\\flightmanagement\\usercontrols\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|d:\\users\\pc\\desktop\\ou\\ltcsdl\\project\\databaseprograming_flightmanagement\\flightmanagement\\usercontrols\\dashboard.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\dashboard.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|d:\\users\\pc\\desktop\\ou\\ltcsdl\\project\\databaseprograming_flightmanagement\\flightmanagement\\usercontrols\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\bll\\flightschedulebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|solutionrelative:bll\\flightschedulebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\dao\\flightscheduledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|D:\\QLCB\\DatabasePrograming_FlightManagement\\dao\\flightscheduledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|solutionrelative:dao\\flightscheduledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\flightmanagement\\usercontrols\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2754F815-C55B-4B45-BF83-EEC9B1A09AE4}|DTO\\DTO.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\dto\\flightschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2754F815-C55B-4B45-BF83-EEC9B1A09AE4}|DTO\\DTO.csproj|solutionrelative:dto\\flightschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\flightmanagement\\usercontrols\\flightschedulemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\flightschedulemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\flightmanagement\\usercontrols\\flightschedulemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\flightschedulemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|D:\\QLCB\\DatabasePrograming_FlightManagement\\bll\\flightschedulebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|solutionrelative:bll\\flightschedulebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|solutionrelative:dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\flightmanagement\\usercontrols\\rulesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\rulesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\flightmanagement\\usercontrols\\rulesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\rulesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\bll\\rulebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|solutionrelative:bll\\rulebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\dao\\ruledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|solutionrelative:dao\\ruledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\flightmanagement\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\bll\\loginbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|solutionrelative:bll\\loginbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\dao\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|solutionrelative:dao\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2754F815-C55B-4B45-BF83-EEC9B1A09AE4}|DTO\\DTO.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\dto\\rules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2754F815-C55B-4B45-BF83-EEC9B1A09AE4}|DTO\\DTO.csproj|solutionrelative:dto\\rules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|d:\\qlcb\\databaseprograming_flightmanagement\\flightmanagement\\usercontrols\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\dashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|D:\\QLCB\\DatabasePrograming_FlightManagement\\flightmanagement\\usercontrols\\dashboard.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\dashboard.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|D:\\QLCB\\DatabasePrograming_FlightManagement\\flightmanagement\\usercontrols\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|D:\\QLCB\\DatabasePrograming_FlightManagement\\flightmanagement\\usercontrols\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C3FA22D6-6CDB-4CA7-B5BD-CA2B7F44F242}|FlightManagement\\GUI.csproj|solutionrelative:flightmanagement\\usercontrols\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\bll\\ticketbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|D:\\QLCB\\DatabasePrograming_FlightManagement\\bll\\ticketbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE85E2D5-A23B-4087-BF90-5BCD0B9420FF}|BLL\\BLL.csproj|solutionrelative:bll\\ticketbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\dao\\ticketdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|D:\\QLCB\\DatabasePrograming_FlightManagement\\dao\\ticketdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E432029C-976D-4AE6-8C86-F57C05837FB3}|DAO\\DAO.csproj|solutionrelative:dao\\ticketdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,52 +90,220 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RulesManagement.cs [Design]",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\RulesManagement.cs",
+              "RelativeDocumentMoniker": "FlightManagement\\UserControls\\RulesManagement.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\RulesManagement.cs [Design]",
+              "RelativeToolTip": "FlightManagement\\UserControls\\RulesManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:11:02.982Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FlightScheduleManagement.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\FlightScheduleManagement.cs",
+              "RelativeDocumentMoniker": "FlightManagement\\UserControls\\FlightScheduleManagement.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\FlightScheduleManagement.cs*",
+              "RelativeToolTip": "FlightManagement\\UserControls\\FlightScheduleManagement.cs*",
+              "ViewState": "AgIAAGwAAAAAAAAAAAA2wHcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:42:40.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DataProvider.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\DataProvider.cs",
+              "RelativeDocumentMoniker": "DAO\\DataProvider.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\DataProvider.cs",
+              "RelativeToolTip": "DAO\\DataProvider.cs",
+              "ViewState": "AgIAAIsAAAAAAAAAAIAwwHgAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:24:47.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FlightScheduleDAO.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\FlightScheduleDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\FlightScheduleDAO.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\FlightScheduleDAO.cs*",
+              "RelativeToolTip": "DAO\\FlightScheduleDAO.cs*",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAqwI4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T13:36:01.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FlightSchedule.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DTO\\FlightSchedule.cs",
+              "RelativeDocumentMoniker": "DTO\\FlightSchedule.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DTO\\FlightSchedule.cs*",
+              "RelativeToolTip": "DTO\\FlightSchedule.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:51:09.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FlightScheduleManagement.cs [Design]",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\FlightScheduleManagement.cs",
+              "RelativeDocumentMoniker": "FlightManagement\\UserControls\\FlightScheduleManagement.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\FlightScheduleManagement.cs [Design]*",
+              "RelativeToolTip": "FlightManagement\\UserControls\\FlightScheduleManagement.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:29:03.317Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FlightScheduleBLL.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\BLL\\FlightScheduleBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\FlightScheduleBLL.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\BLL\\FlightScheduleBLL.cs",
+              "RelativeToolTip": "BLL\\FlightScheduleBLL.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwFMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T14:04:29.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RulesManagement.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\RulesManagement.cs",
+              "RelativeDocumentMoniker": "FlightManagement\\UserControls\\RulesManagement.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\RulesManagement.cs",
+              "RelativeToolTip": "FlightManagement\\UserControls\\RulesManagement.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAywFcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:24:04.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RuleBLL.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\BLL\\RuleBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\RuleBLL.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\BLL\\RuleBLL.cs",
+              "RelativeToolTip": "BLL\\RuleBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:23:23.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RuleDAO.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\RuleDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\RuleDAO.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\RuleDAO.cs",
+              "RelativeToolTip": "DAO\\RuleDAO.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAcwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:22:52.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\LoginForm.cs",
+              "RelativeDocumentMoniker": "FlightManagement\\LoginForm.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\LoginForm.cs",
+              "RelativeToolTip": "FlightManagement\\LoginForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:21:46.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginDAO.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\LoginDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\LoginDAO.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\LoginDAO.cs",
+              "RelativeToolTip": "DAO\\LoginDAO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:09:00.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginBLL.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\BLL\\LoginBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\LoginBLL.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\BLL\\LoginBLL.cs",
+              "RelativeToolTip": "BLL\\LoginBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:21:06.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Rules.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DTO\\Rules.cs",
+              "RelativeDocumentMoniker": "DTO\\Rules.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DTO\\Rules.cs",
+              "RelativeToolTip": "DTO\\Rules.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:18:46.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Dashboard.Designer.cs",
-              "DocumentMoniker": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.Designer.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.Designer.cs",
               "RelativeDocumentMoniker": "FlightManagement\\UserControls\\Dashboard.Designer.cs",
-              "ToolTip": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.Designer.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.Designer.cs",
               "RelativeToolTip": "FlightManagement\\UserControls\\Dashboard.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPIAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T15:03:30.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 15,
               "Title": "Dashboard.resx",
-              "DocumentMoniker": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.resx",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.resx",
               "RelativeDocumentMoniker": "FlightManagement\\UserControls\\Dashboard.resx",
-              "ToolTip": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.resx",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.resx",
               "RelativeToolTip": "FlightManagement\\UserControls\\Dashboard.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-05-03T15:03:30.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T15:03:30.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FlightScheduleBLL.cs",
-              "DocumentMoniker": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\BLL\\FlightScheduleBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\FlightScheduleBLL.cs",
-              "ToolTip": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\BLL\\FlightScheduleBLL.cs",
-              "RelativeToolTip": "BLL\\FlightScheduleBLL.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvxgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T14:04:29.517Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 18,
               "Title": "TicketBLL.cs",
-              "DocumentMoniker": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\BLL\\TicketBLL.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\BLL\\TicketBLL.cs",
               "RelativeDocumentMoniker": "BLL\\TicketBLL.cs",
-              "ToolTip": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\BLL\\TicketBLL.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\BLL\\TicketBLL.cs",
               "RelativeToolTip": "BLL\\TicketBLL.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAwwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -95,23 +311,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FlightScheduleDAO.cs",
-              "DocumentMoniker": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\DAO\\FlightScheduleDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\FlightScheduleDAO.cs",
-              "ToolTip": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\DAO\\FlightScheduleDAO.cs*",
-              "RelativeToolTip": "DAO\\FlightScheduleDAO.cs*",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAywBYAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T13:36:01.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 19,
               "Title": "TicketDAO.cs",
-              "DocumentMoniker": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\DAO\\TicketDAO.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\TicketDAO.cs",
               "RelativeDocumentMoniker": "DAO\\TicketDAO.cs",
-              "ToolTip": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\DAO\\TicketDAO.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\DAO\\TicketDAO.cs",
               "RelativeToolTip": "DAO\\TicketDAO.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAowD8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -119,25 +323,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 16,
               "Title": "Dashboard.cs",
-              "DocumentMoniker": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.cs",
               "RelativeDocumentMoniker": "FlightManagement\\UserControls\\Dashboard.cs",
-              "ToolTip": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.cs",
+              "ToolTip": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.cs",
               "RelativeToolTip": "FlightManagement\\UserControls\\Dashboard.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAxwCYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T13:21:59.742Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T13:21:59.742Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 17,
               "Title": "Dashboard.cs [Design]",
-              "DocumentMoniker": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.cs",
+              "DocumentMoniker": "D:\\QLCB\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.cs",
               "RelativeDocumentMoniker": "FlightManagement\\UserControls\\Dashboard.cs",
               "ToolTip": "D:\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.cs [Design]",
-              "RelativeToolTip": "FlightManagement\\UserControls\\Dashboard.cs [Design]",
+              "RelativeToolTip": "..\\..\\Users\\pc\\Desktop\\OU\\LTCSDL\\Project\\DatabasePrograming_FlightManagement\\FlightManagement\\UserControls\\Dashboard.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T13:07:41.999Z"
             }
