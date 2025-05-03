@@ -18,6 +18,18 @@ namespace BLL
             ticketDAO = new TicketDAO();
         }
 
+        public decimal GetIncome()
+        {
+            try
+            {
+                return ticketDAO.GetIncome();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error calculating income: " + ex.Message, ex);
+            }
+        }
+
         public bool AddTicket(Tickets ticket)
         {
             try

@@ -154,6 +154,7 @@ namespace FlightManagement.UserControls
                 // Tạo vé cho hành khách
                 Tickets ticket = new Tickets(flightID, passengerID, ticketType, ticketPrice, createdDate, exPackage);
                 ticketBLL.AddTicket(ticket);  // Thêm vé vào cơ sở dữ liệu
+                MessageBox.Show("Đặt vé thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //thanh toán
                 decimal amount = ticketPrice * quantity; // Tổng số tiền thanh toán
@@ -191,6 +192,62 @@ namespace FlightManagement.UserControls
                 passengerInfoForm.ShowDialog();
             }
             btnBook.Enabled = true;
+        }
+
+        private void cbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int quantity = (int)numQuantity.Value;
+            int ticketType = 0;
+            if (cbType.SelectedItem != null)
+            {
+                ticketType = int.Parse(cbType.SelectedItem.ToString());
+
+            }
+            if (ticketType == 1)
+            {
+                for (int i = 0; i < quantity; i++)
+                {
+                    dataGridView1.SelectedRows[i].Cells[3].Value.ToString();
+                }
+            }
+            else
+            {
+                for (int i = 0; i < quantity; i++)
+                {
+                    dataGridView1.SelectedRows[i].Cells[5].Value.ToString();
+                }
+            }
+            decimal ticketPrice = ticketType * quantity;
+            lblAmount.Text = ticketPrice.ToString("N0", new System.Globalization.CultureInfo("vi-VN"));
+
+        }
+
+        private void numQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            int quantity = (int)numQuantity.Value;
+            int ticketType = 0;
+            if (cbType.SelectedItem != null)
+            {
+                ticketType = int.Parse(cbType.SelectedItem.ToString());
+
+            }
+            if (ticketType == 1)
+            {
+                for (int i = 0; i < quantity; i++)
+                {
+                    dataGridView1.SelectedRows[i].Cells[3].Value.ToString();
+                }
+            }
+            else
+            {
+                for (int i = 0; i < quantity; i++)
+                {
+                    dataGridView1.SelectedRows[i].Cells[5].Value.ToString();
+                }
+            }
+            decimal ticketPrice = ticketType * quantity;
+            lblAmount.Text = ticketPrice.ToString("N0", new System.Globalization.CultureInfo("vi-VN"));
+
         }
     }
 }

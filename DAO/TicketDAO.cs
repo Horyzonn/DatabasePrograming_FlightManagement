@@ -46,6 +46,24 @@ namespace DAO
             return ExeQuery(sql, CommandType.Text, parameters);
         }
 
+        public decimal GetIncome()
+        {
+            string sql = "SELECT SUM(Price) FROM Tickets";
+            try
+            {
+                Connect();
+                return (decimal)ExeScalar(sql, CommandType.Text);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error calculating income: " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+
         public bool AddTicket(Tickets ticket)
         {
             string sql = "INSERT INTO Tickets (FlightScheduleID, PassengerID, Type,Price,CreatedDate,ExtraPackage) VALUES (@flightid,@passengerid,@type,@price,@createdDate,@extraPackage)";

@@ -42,6 +42,24 @@ namespace DAO
             return ExeQuery(sql, CommandType.Text);
         }
 
+        public int GetRouteCount()
+        {
+            string sql = "SELECT COUNT(*) FROM Routes";
+            try
+            {
+                Connect();
+                return (int)ExeScalar(sql, CommandType.Text);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi đếm số lượng tuyến bay: " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+
         public bool IsRouteExists(string departure, string arrival)
         {
             string sql = "SELECT COUNT(*) FROM Routes WHERE DepartureAirport = @Departure AND ArrivalAirport = @Arrival";

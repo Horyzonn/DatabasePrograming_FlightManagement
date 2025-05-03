@@ -16,6 +16,65 @@ namespace DAO
             string sql = "SELECT * FROM FlightSchedule";
             return ExeQuery(sql, CommandType.Text);
         }
+
+        public Dictionary<string, int> GetFlightScheduleCountByRoute()
+        {
+            string sql = @"
+        SELECT 
+            r.DepartureAirport,
+            r.ArrivalAirport,
+            COUNT(*) AS FlightCount
+        FROM FlightSchedule fs
+        JOIN Routes r ON fs.RouteId = r.ID
+        GROUP BY r.DepartureAirport, r.ArrivalAirport";
+
+            Dictionary<string, int> flightCounts = new Dictionary<string, int>();
+
+            try
+            {
+                Connect();
+                DataTable dt = ExeQuery(sql, CommandType.Text);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    string departure = row["DepartureAirport"].ToString();
+                    string arrival = row["ArrivalAirport"].ToString();
+                    string routeLabel = $"{departure} → {arrival}";
+
+                    int count = Convert.ToInt32(row["FlightCount"]);
+                    flightCounts[routeLabel] = count;
+                }
+
+                return flightCounts;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi lấy số chuyến bay theo tuyến (tên sân bay): " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+
+
+        public int GetFlightScheduleCount()
+        {
+            string sql = "SELECT COUNT(*) FROM FlightSchedule";
+            try
+            {
+                Connect();
+                return (int)ExeScalar(sql, CommandType.Text);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi đếm số lượng lịch bay: " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
         public bool AddFlightSchedule(FlightSchedule flight)
         {
 

@@ -39,18 +39,19 @@
             this.cbDep = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbType = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.numQuantity = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnBook = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numQuantity = new System.Windows.Forms.NumericUpDown();
-            this.btnInfo = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbType = new System.Windows.Forms.ComboBox();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,6 +155,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lblAmount);
             this.panel3.Controls.Add(this.cbType);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.btnInfo);
@@ -166,13 +168,74 @@
             this.panel3.Size = new System.Drawing.Size(1182, 61);
             this.panel3.TabIndex = 2;
             // 
+            // cbType
+            // 
+            this.cbType.FormattingEnabled = true;
+            this.cbType.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cbType.Location = new System.Drawing.Point(107, 15);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(66, 32);
+            this.cbType.TabIndex = 7;
+            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(28, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 24);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Loại vé";
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.ForeColor = System.Drawing.Color.White;
+            this.btnInfo.Location = new System.Drawing.Point(352, 7);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(169, 46);
+            this.btnInfo.TabIndex = 9;
+            this.btnInfo.Text = "Nhập thông tin";
+            this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
+            // numQuantity
+            // 
+            this.numQuantity.Location = new System.Drawing.Point(266, 16);
+            this.numQuantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numQuantity.Name = "numQuantity";
+            this.numQuantity.Size = new System.Drawing.Size(60, 32);
+            this.numQuantity.TabIndex = 8;
+            this.numQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numQuantity.ValueChanged += new System.EventHandler(this.numQuantity_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(180, 18);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 24);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Số lượng";
+            // 
             // btnBook
             // 
             this.btnBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
             this.btnBook.Enabled = false;
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBook.ForeColor = System.Drawing.Color.White;
-            this.btnBook.Location = new System.Drawing.Point(1051, 10);
+            this.btnBook.Location = new System.Drawing.Point(1051, 7);
             this.btnBook.Name = "btnBook";
             this.btnBook.Size = new System.Drawing.Size(118, 46);
             this.btnBook.TabIndex = 7;
@@ -192,64 +255,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(1182, 344);
             this.dataGridView1.TabIndex = 3;
             // 
-            // label5
+            // lblAmount
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(674, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 24);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Số lượng";
-            // 
-            // numQuantity
-            // 
-            this.numQuantity.Location = new System.Drawing.Point(760, 17);
-            this.numQuantity.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numQuantity.Name = "numQuantity";
-            this.numQuantity.Size = new System.Drawing.Size(60, 32);
-            this.numQuantity.TabIndex = 8;
-            this.numQuantity.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(71)))), ((int)(((byte)(105)))));
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.ForeColor = System.Drawing.Color.White;
-            this.btnInfo.Location = new System.Drawing.Point(856, 10);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(169, 46);
-            this.btnInfo.TabIndex = 9;
-            this.btnInfo.Text = "Nhập thông tin";
-            this.btnInfo.UseVisualStyleBackColor = false;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(522, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 24);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Loại vé";
-            // 
-            // cbType
-            // 
-            this.cbType.FormattingEnabled = true;
-            this.cbType.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cbType.Location = new System.Drawing.Point(601, 16);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(66, 32);
-            this.cbType.TabIndex = 7;
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.ForeColor = System.Drawing.Color.Green;
+            this.lblAmount.Location = new System.Drawing.Point(732, 12);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(109, 36);
+            this.lblAmount.TabIndex = 11;
+            this.lblAmount.Text = "0 VNĐ";
             // 
             // BookTicket
             // 
@@ -269,8 +284,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,5 +310,6 @@
         private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblAmount;
     }
 }

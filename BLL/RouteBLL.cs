@@ -19,6 +19,18 @@ namespace BLL
             routeDAO = new RouteDAO();
         }
 
+        public int GetRouteCount()
+        {
+            try
+            {
+                return routeDAO.GetRouteCount();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi đếm số lượng tuyến bay: " + ex.Message, ex);
+            }
+        }
+
         public bool AddNewRoute(string departureAirport, string arrivalAirport)
         {
             if (string.IsNullOrWhiteSpace(departureAirport) || string.IsNullOrWhiteSpace(arrivalAirport))

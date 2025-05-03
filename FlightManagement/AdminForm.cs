@@ -86,7 +86,8 @@ namespace FlightManagement
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            LoadUserControl(new Dashboard());
+            HighlightButton(btnDashboard);
         }
     }
 }

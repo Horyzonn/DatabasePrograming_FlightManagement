@@ -51,8 +51,8 @@ namespace FlightManagement
         {
             Users user = new Users()
             {
-                Username = "guest1",
-                Password = "123"
+                Username = txtUsername.Text,
+                Password = txtPassword.Text
             };
             
 

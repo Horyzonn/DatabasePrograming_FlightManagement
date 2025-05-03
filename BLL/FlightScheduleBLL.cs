@@ -17,6 +17,30 @@ namespace BLL
             flightScheduleDAO = new FlightScheduleDAO();
         }
 
+        public int GetFlightScheduleCount()
+        {
+            try
+            {
+                return flightScheduleDAO.GetFlightScheduleCount();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error counting flight schedules: " + ex.Message, ex);
+            }
+        }
+
+        public Dictionary<string,int> GetFlightScheduleCountByRoute()
+        {
+            try
+            {
+                return flightScheduleDAO.GetFlightScheduleCountByRoute();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error counting flight schedules by route: " + ex.Message, ex);
+            }
+        }
+
 
         public DataTable GetAllFlightSchedules()
         {
