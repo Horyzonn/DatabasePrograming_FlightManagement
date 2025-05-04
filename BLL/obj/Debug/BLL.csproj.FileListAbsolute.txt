@@ -32,3 +32,15 @@ D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\BLL\ob
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.dll
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.pdb
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\BLL\bin\Debug\Mono.HttpUtility.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\bin\Debug\BLL.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\bin\Debug\BLL.pdb
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\bin\Debug\DAO.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\bin\Debug\DTO.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\bin\Debug\Mono.HttpUtility.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\bin\Debug\DAO.pdb
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\bin\Debug\DTO.pdb
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\BLL\obj\Debug\BLL.pdb

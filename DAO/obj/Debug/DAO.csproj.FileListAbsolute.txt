@@ -26,3 +26,13 @@ D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\DAO\ob
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.dll
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.pdb
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\DAO\bin\Debug\Mono.HttpUtility.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\bin\Debug\DAO.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\bin\Debug\DAO.pdb
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\bin\Debug\DTO.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\bin\Debug\Mono.HttpUtility.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\bin\Debug\DTO.pdb
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.csproj.Up2Date
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.dll
+D:\QLChuyenBay\DatabasePrograming_FlightManagement\DAO\obj\Debug\DAO.pdb
