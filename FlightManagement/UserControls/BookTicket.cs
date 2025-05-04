@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -49,6 +50,14 @@ namespace FlightManagement.UserControls
             string arr = cbArr.SelectedValue.ToString();
             DateTime date = dtDate.Value.Date;
 
+            // Kiểm tra nếu ngày đặt nhỏ hơn ngày hiện tại
+            if (date < DateTime.Now.Date)
+            {
+                MessageBox.Show("Ngày đặt không được nhỏ hơn ngày hiện tại. Vui lòng chọn ngày hợp lệ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;  // Thoát phương thức nếu ngày đặt không hợp lệ
+            }
+
+            // Tiếp tục nếu ngày đặt hợp lệ
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
@@ -93,17 +102,16 @@ namespace FlightManagement.UserControls
                 int quantity2 = Convert.ToInt32(row["Ticket2Quantity"]);
                 int booked2 = Convert.ToInt32(row["Ticket2BookedQuantity"]);
                 newRow["Loại 2 còn"] = quantity2 - booked2;
+
                 flightSchedulesCustomized.Rows.Add(newRow);
             }
 
-
             dataGridView1.DataSource = flightSchedulesCustomized;
-            
-
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        
+
+
 
         private void btnBook_Click(object sender, EventArgs e)
         {
@@ -116,20 +124,43 @@ namespace FlightManagement.UserControls
                 MessageBox.Show("Không đủ số lượng hành khách. Vui lòng nhập lại.");
                 return;
             }
+            int ticketType = 0;
+            if (cbType.SelectedItem != null)
+            {
+                ticketType = int.Parse(cbType.SelectedItem.ToString());
+            }
+
+            // Lấy số lượng vé còn lại theo loại
+            int available = 0;
+            if (ticketType == 1)
+            {
+                available = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[4].Value); // "Loại 1 còn"
+            }
+            else
+            {
+                available = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[6].Value); // "Loại 2 còn"
+            }
+
+            // Kiểm tra nếu vé không đủ
+            if (available < quantity)
+            {
+                MessageBox.Show("Không đủ vé để đặt. Vui lòng giảm số lượng hoặc chọn chuyến bay khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             for (int i = 0; i < quantity; i++)
             {
-                
+
 
                 int flightID = 0;
                 // Kiểm tra xem giá trị có hợp lệ không
-                if (dataGridView1.SelectedRows[i].Cells[0].Value != null)
+                if (dataGridView1.SelectedRows[0].Cells[0].Value != null)
                 {
-                    int.TryParse(dataGridView1.SelectedRows[i].Cells[0].Value.ToString(), out flightID); // Kiểm tra giá trị flightID
+                    int.TryParse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString(), out flightID); // Kiểm tra giá trị flightID
                 }
 
                 int passengerID = passengerIDs[i];
-                int ticketType = 0;
+                ticketType = 0;
                 // Kiểm tra giá trị ticketType
                 if (cbType.SelectedItem != null)
                 {
@@ -141,11 +172,11 @@ namespace FlightManagement.UserControls
                 // Kiểm tra giá trị ticketPrice
                 if (ticketType == 1)
                 {
-                    decimal.TryParse(dataGridView1.SelectedRows[i].Cells[3].Value.ToString().Replace(".", "").Replace(",", ""), out ticketPrice); // Kiểm tra giá trị ticketPrice
+                    decimal.TryParse(dataGridView1.SelectedRows[0].Cells[3].Value.ToString().Replace(".", "").Replace(",", ""), out ticketPrice); // Kiểm tra giá trị ticketPrice
                 }
                 else
                 {
-                    decimal.TryParse(dataGridView1.SelectedRows[i].Cells[5].Value.ToString().Replace(".", "").Replace(",", ""), out ticketPrice);
+                    decimal.TryParse(dataGridView1.SelectedRows[0].Cells[5].Value.ToString().Replace(".", "").Replace(",", ""), out ticketPrice);
                 }
 
                 DateTime createdDate = DateTime.Now;
@@ -168,7 +199,7 @@ namespace FlightManagement.UserControls
                 };
 
                 // Gửi yêu cầu thanh toán đến VNPay
-                string paymentUrl = VNPayService.CreatePaymentUrl(orderId,amount,"127.0.0.1");
+                string paymentUrl = VNPayService.CreatePaymentUrl(orderId, amount, "127.0.0.1");
 
                 // Mở trình duyệt để người dùng thực hiện thanh toán
                 System.Diagnostics.Process.Start(paymentUrl);
@@ -198,56 +229,68 @@ namespace FlightManagement.UserControls
         {
             int quantity = (int)numQuantity.Value;
             int ticketType = 0;
+            decimal ticketPrice = 0;
+
+            // Kiểm tra nếu có item được chọn trong ComboBox
             if (cbType.SelectedItem != null)
             {
                 ticketType = int.Parse(cbType.SelectedItem.ToString());
-
             }
+
+            // Lấy giá vé từ cột tương ứng
             if (ticketType == 1)
             {
                 for (int i = 0; i < quantity; i++)
                 {
-                    dataGridView1.SelectedRows[i].Cells[3].Value.ToString();
+                    // Lấy giá từ cột thứ 3 (cột chứa giá vé loại 1)
+                    ticketPrice += Convert.ToDecimal(dataGridView1.SelectedRows[0].Cells[3].Value);
                 }
             }
             else
             {
                 for (int i = 0; i < quantity; i++)
                 {
-                    dataGridView1.SelectedRows[i].Cells[5].Value.ToString();
+                    // Lấy giá từ cột thứ 5 (cột chứa giá vé loại 2)
+                    ticketPrice += Convert.ToDecimal(dataGridView1.SelectedRows[0].Cells[5].Value);
                 }
             }
-            decimal ticketPrice = ticketType * quantity;
-            lblAmount.Text = ticketPrice.ToString("N0", new System.Globalization.CultureInfo("vi-VN"));
 
+            // Cập nhật giá trị label với giá vé tính được
+            lblAmount.Text = ticketPrice.ToString("N0", new System.Globalization.CultureInfo("vi-VN"));
         }
 
         private void numQuantity_ValueChanged(object sender, EventArgs e)
         {
             int quantity = (int)numQuantity.Value;
             int ticketType = 0;
+            decimal ticketPrice = 0;
+
+            // Kiểm tra nếu có item được chọn trong ComboBox
             if (cbType.SelectedItem != null)
             {
                 ticketType = int.Parse(cbType.SelectedItem.ToString());
-
             }
+
+            // Lấy giá vé từ cột tương ứng
             if (ticketType == 1)
             {
                 for (int i = 0; i < quantity; i++)
                 {
-                    dataGridView1.SelectedRows[i].Cells[3].Value.ToString();
+                    // Lấy giá từ cột thứ 3 (cột chứa giá vé loại 1)
+                    ticketPrice += Convert.ToDecimal(dataGridView1.SelectedRows[0].Cells[3].Value);
                 }
             }
             else
             {
                 for (int i = 0; i < quantity; i++)
                 {
-                    dataGridView1.SelectedRows[i].Cells[5].Value.ToString();
+                    // Lấy giá từ cột thứ 5 (cột chứa giá vé loại 2)
+                    ticketPrice += Convert.ToDecimal(dataGridView1.SelectedRows[0].Cells[5].Value);
                 }
             }
-            decimal ticketPrice = ticketType * quantity;
-            lblAmount.Text = ticketPrice.ToString("N0", new System.Globalization.CultureInfo("vi-VN"));
 
+            // Cập nhật giá trị label với giá vé tính được
+            lblAmount.Text = ticketPrice.ToString("N0", new System.Globalization.CultureInfo("vi-VN"));
         }
     }
-}
+    }

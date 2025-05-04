@@ -64,9 +64,63 @@ namespace DAO
             }
         }
 
+        public Dictionary<string, int> GetTicketCountByMonth()
+        {
+            string sql = @"
+        SELECT 
+            FORMAT(CreatedDate, 'yyyy-MM') AS Month,
+            COUNT(*) AS TicketCount
+        FROM Tickets
+        GROUP BY FORMAT(CreatedDate, 'yyyy-MM')
+        ORDER BY Month";
+
+            Dictionary<string, int> ticketCounts = new Dictionary<string, int>();
+
+            try
+            {
+                Connect();
+                DataTable dt = ExeQuery(sql, CommandType.Text);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    string month = row["Month"].ToString(); // e.g. "2024-07"
+                    int count = Convert.ToInt32(row["TicketCount"]);
+
+                    ticketCounts[month] = count;
+                }
+
+                return ticketCounts;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi đếm vé theo tháng: " + ex.Message);
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+
+
         public bool AddTicket(Tickets ticket)
         {
-            string sql = "INSERT INTO Tickets (FlightScheduleID, PassengerID, Type,Price,CreatedDate,ExtraPackage) VALUES (@flightid,@passengerid,@type,@price,@createdDate,@extraPackage)";
+            string sql = @"
+INSERT INTO Tickets (FlightScheduleID, PassengerID, Type, Price, CreatedDate, ExtraPackage) 
+VALUES (@flightid, @passengerid, @type, @price, @createdDate, @extraPackage);
+
+IF @type = 1
+BEGIN
+    UPDATE FlightSchedule 
+    SET Ticket1BookedQuantity = Ticket1BookedQuantity + 1 
+    WHERE ID = @flightid;
+END
+ELSE
+BEGIN
+    UPDATE FlightSchedule 
+    SET Ticket2BookedQuantity = Ticket2BookedQuantity + 1 
+    WHERE ID = @flightid;
+END
+";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@flightid", ticket.FlightScheduleId),

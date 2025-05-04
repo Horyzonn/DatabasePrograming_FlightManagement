@@ -74,3 +74,4 @@ D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\Flight
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.PassengerInfoForm.resources
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\FlightManagement\bin\Debug\Mono.HttpUtility.dll
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.Dashboard.resources
+D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.StaffForm.resources

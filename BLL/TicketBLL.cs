@@ -30,6 +30,18 @@ namespace BLL
             }
         }
 
+        public Dictionary<string, int> GetTicketCountByMonth()
+        {
+            try
+            {
+                return ticketDAO.GetTicketCountByMonth();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error retrieving ticket count by month: " + ex.Message, ex);
+            }
+        }
+
         public bool AddTicket(Tickets ticket)
         {
             try

@@ -86,9 +86,11 @@ namespace FlightManagement
                 }
                 else if (cbRole.Text == "Nhân viên")
                 {
-                    
-                    MessageBox.Show("Đăng nhập thành công với quyền Nhân viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+                    CurrentUser.Id = user.Id;
+                    CurrentUser.Username = user.Username;
+
+                    StaffForm staffForm = new StaffForm();
+                    staffForm.Show();
                 }
                 else if (cbRole.Text == "Khách hàng")
                 {
