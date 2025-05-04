@@ -79,12 +79,12 @@ namespace FlightManagement.UserControls
                     Password = row.Cells["Password"].Value?.ToString(),
                     Email = row.Cells["Email"].Value?.ToString(),
                     PhoneNumber = row.Cells["PhoneNumber"].Value?.ToString(),
-                    DateOfBirth = (row.Cells["DateOfBirth"].Value != DBNull.Value) ? Convert.ToDateTime(row.Cells["DateOfBirth"].Value) : (DateTime?)null,
+                    DateOfBirth = (row.Cells["DoB"].Value != DBNull.Value) ? Convert.ToDateTime(row.Cells["DoB"].Value) : (DateTime?)null,
 
 
-                    UserRole = row.Cells["UserRole"].Value?.ToString(),
-
+                    UserRole = row.Cells["UserRole"].Value?.ToString()
                     
+
                 };
                 // Kiểm tra đầu vào đơn giản
                 if (string.IsNullOrWhiteSpace(user.Username) || string.IsNullOrWhiteSpace(user.Password))
@@ -124,9 +124,10 @@ namespace FlightManagement.UserControls
                     Password = row.Cells["Password"].Value?.ToString(),
                     Email = row.Cells["Email"].Value?.ToString(),
                     PhoneNumber = row.Cells["PhoneNumber"].Value?.ToString(),
-                    DateOfBirth = row.Cells["DateOfBirth"].Value == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row.Cells["DateOfBirth"].Value),
+                    DateOfBirth = row.Cells["DoB"].Value == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(row.Cells["DoB"].Value),
                     
                     UserRole = comboBoxRoles.SelectedItem?.ToString()
+                 
                 };
                 if (string.IsNullOrWhiteSpace(user.Username) || string.IsNullOrWhiteSpace(user.Password))
                 {

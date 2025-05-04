@@ -26,3 +26,5 @@ D:\QLChuyenBay\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.csproj.Core
 D:\QLChuyenBay\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.csproj.Up2Date
 D:\QLChuyenBay\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.dll
 D:\QLChuyenBay\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.pdb
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\bin\Debug\Mono.HttpUtility.dll
+D:\QLCB\DatabasePrograming_FlightManagement\DTO\obj\Debug\DTO.csproj.Up2Date

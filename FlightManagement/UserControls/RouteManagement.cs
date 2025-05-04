@@ -190,18 +190,28 @@ namespace FlightManagement.User_Control
 
         private void DgvRoutes_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            string departure = e.Row.Cells["DepartureAirport"].Value.ToString();
-            string arrival = e.Row.Cells["ArrivalAirport"].Value.ToString();
+            string routeID = e.Row.Cells["ID"].Value.ToString();
+            //string arrival = e.Row.Cells["ArrivalAirport"].Value.ToString();
 
-            var confirm = MessageBox.Show($"Xóa tuyến bay từ {departure} đến {arrival}?", "Xác nhận", MessageBoxButtons.YesNo);
+            var confirm = MessageBox.Show("Bạn chắc chắn muốn Xóa tuyến bay này?", "Xác nhận", MessageBoxButtons.YesNo);
             if (confirm == DialogResult.Yes)
             {
-                bool success = routeBLL.DeleteRoute(departure, arrival);
-                if (!success)
+                try
                 {
-                    MessageBox.Show("Xóa tuyến bay thất bại.");
+                    bool success = routeBLL.DeleteRoute(routeID);
+                    if (!success)
+                    {
+                        MessageBox.Show("Xóa tuyến bay thất bại.");
+                        e.Cancel = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     e.Cancel = true;
                 }
+                
             }
             else
             {

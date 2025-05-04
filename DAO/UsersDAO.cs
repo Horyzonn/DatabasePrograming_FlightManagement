@@ -14,12 +14,13 @@ namespace DAO
         public DataTable GetAllUsers()
         {
             string sql = "SELECT * FROM Users";
+            
             return ExeQuery(sql, CommandType.Text);
         }
         public bool AddUser(Users user)
         {
             string sql = @"INSERT INTO Users 
-                        (Username, Password, DateOfBirth, Email, PhoneNumber, UserRole )
+                        (Username, Password, DoB, Email, PhoneNumber, UserRole )
                         VALUES 
                         (@Username, @Password, @DateOfBirth, @Email, @PhoneNumber, @UserRole )";
             SqlParameter[] parameters = new SqlParameter[]
@@ -53,10 +54,11 @@ namespace DAO
             string sql = @"UPDATE Users SET 
                         Username = @Username,
                         Password = @Password,
-                        DateOfBirth = @DateOfBirth,
+                        DoB = @DateOfBirth,
                         Email = @Email,
                         PhoneNumber = @PhoneNumber,
                         UserRole = @UserRole
+                    
                         
                     WHERE Id = @Id";
 
@@ -70,6 +72,7 @@ namespace DAO
                 new SqlParameter("@PhoneNumber", user.PhoneNumber),
                 new SqlParameter("@UserRole", user.UserRole)
                 
+
             };
             try
             {
@@ -126,6 +129,7 @@ namespace DAO
         public DataTable GetUsersByRole(string role)
         {
             string sql = "SELECT * FROM Users WHERE UserRole = @UserRole";
+           
             SqlParameter[] parameters =
             {
             new SqlParameter("@UserRole", role)

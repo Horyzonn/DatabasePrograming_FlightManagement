@@ -13,10 +13,12 @@ namespace BLL
     public class RouteBLL
     {
         private RouteDAO routeDAO;
+        private FlightScheduleDAO flightScheduleDAO;
 
         public RouteBLL()
         {
             routeDAO = new RouteDAO();
+            flightScheduleDAO = new FlightScheduleDAO();
         }
 
         public int GetRouteCount()
@@ -50,16 +52,24 @@ namespace BLL
         }
 
 
-        public bool DeleteRoute(string departureAirport, string arrivalAirport)
+        public bool DeleteRoute(string routeID)
         {
-            try
+            if (!flightScheduleDAO.HasFlightUsingRoute(routeID))
             {
-                return routeDAO.DeleteRoute(departureAirport,arrivalAirport);
+                try
+                {
+                    return routeDAO.DeleteRoute(routeID);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Lỗi xóa tuyến bay: " + ex.Message, ex);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                throw new Exception("Lỗi xóa tuyến bay: " + ex.Message, ex);
+                throw new Exception("tuyến bay đang được sử dụng, không thể xóa");
             }
+            
         }
             public DataTable GetAllRoutes()
             {

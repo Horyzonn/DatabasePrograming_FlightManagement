@@ -72,10 +72,7 @@ namespace BLL
         }
 
 
-        public bool UpdateFlightSchedule(FlightSchedule flight)
-        {
-                return flightScheduleDAO.UpdateFlightSchedule(flight);
-        }
+        
         
         public bool IsFlightScheduleExists(int id)
         {

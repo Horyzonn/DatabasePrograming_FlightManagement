@@ -87,13 +87,13 @@ namespace DAO
             return count > 0;
         }
 
-        public bool DeleteRoute(string departure, string arrival)
+        public bool DeleteRoute(string routeID)
         {
-            string sql = "DELETE FROM Routes WHERE DepartureAirport = @departure AND ArrivalAirport = @arrival";
+            string sql = "DELETE FROM Routes WHERE ID=@routeID";
             SqlParameter[] parameters = new SqlParameter[]
             {
-                new SqlParameter("@Departure", departure),
-                new SqlParameter("@Arrival", arrival),
+                new SqlParameter("@routeID", routeID),
+                //new SqlParameter("@Arrival", arrival),
             };
 
             try

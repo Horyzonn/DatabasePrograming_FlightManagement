@@ -41,8 +41,6 @@ D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightMan
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.PassengerManagement.resources
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.RulesManagement.resources
 D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.UsersManagementControl.resources
-D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
-D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.CopyComplete
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\FlightManagement\bin\Debug\FlightManagement.exe.config
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\FlightManagement\bin\Debug\FlightManagement.exe
 D:\Users\pc\Desktop\OU\LTCSDL\Project\DatabasePrograming_FlightManagement\FlightManagement\bin\Debug\FlightManagement.pdb
@@ -107,3 +105,11 @@ D:\QLChuyenBay\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GU
 D:\QLChuyenBay\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.Up2Date
 D:\QLChuyenBay\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.exe
 D:\QLChuyenBay\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.pdb
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.GuestForm.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.PassengerInfoForm.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.StaffForm.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.BookTicket.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.Dashboard.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\FlightManagement.UserControls.FindTicket.resources
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\bin\Debug\Mono.HttpUtility.dll
+D:\QLCB\DatabasePrograming_FlightManagement\FlightManagement\obj\Debug\GUI.csproj.Up2Date
