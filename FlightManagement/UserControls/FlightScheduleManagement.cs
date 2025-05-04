@@ -30,8 +30,8 @@ namespace FlightManagement.UserControls
         {
             DataTable routes = routeBLL.GetAllRoutes();
             cbRouteId.DataSource = routes.Copy();
-            cbRouteId.DisplayMember = "RouteID";   // Hiển thị RouteId
-            cbRouteId.ValueMember = "RouteID";      // Lấy RouteId
+            cbRouteId.DisplayMember = "ID";   // Hiển thị RouteId
+            cbRouteId.ValueMember = "ID";      // Lấy RouteId
         }
 
         private void LoadFlightSchedulesList()

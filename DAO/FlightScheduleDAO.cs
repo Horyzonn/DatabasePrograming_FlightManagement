@@ -15,21 +15,21 @@ namespace DAO
         {
             //  string sql = "SELECT * FROM FlightSchedule";
             string sql = @"
-SELECT 
-    fs.ID AS Id,
-    fs.RouteID,
-    da.Name AS DepartureAirport,
-    aa.Name AS ArrivalAirport,
-    fs.DepartureTime,
-    fs.ArrivalTime
-FROM 
-    FlightSchedule fs
-JOIN 
-    Routes r ON fs.RouteID = r.RouteID
-JOIN 
-    Airports da ON r.DepartureAirport = da.Code
-JOIN 
-    Airports aa ON r.ArrivalAirport = aa.Code";
+                                SELECT 
+                                    fs.ID AS Id,
+                                    fs.RouteID,
+                                    da.Name AS DepartureAirport,
+                                    aa.Name AS ArrivalAirport,
+                                    fs.DepartureTime,
+                                    fs.ArrivalTime
+                                FROM 
+                                    FlightSchedule fs
+                                JOIN 
+                                    Routes r ON fs.RouteID = r.ID
+                                JOIN 
+                                    Airports da ON r.DepartureAirport = da.Code
+                                JOIN 
+                                    Airports aa ON r.ArrivalAirport = aa.Code";
 
             return ExeQuery(sql, CommandType.Text);
         }
@@ -97,10 +97,10 @@ JOIN
 
             string sql = @"INSERT INTO FlightSchedule 
                         (RouteID, DepartureTime, ArrivalTime, Ticket1Quantity, Ticket2Quantity, 
-                         Ticket1BookedQuantity, Ticket2BookedQuantity, Ticket1Price, Ticket2Price)
+                          Ticket1Price, Ticket2Price)
                         VALUES 
                         (@RouteID, @DepartureTime, @ArrivalTime, @Ticket1Quantity, @Ticket2Quantity, 
-                         @Ticket1BookedQuantity, @Ticket2BookedQuantity, @Ticket1Price, @Ticket2Price)";
+                         @Ticket1Price, @Ticket2Price)";
 
             SqlParameter[] parameters = new SqlParameter[]
             {                
@@ -109,8 +109,8 @@ JOIN
                 new SqlParameter("@ArrivalTime", flight.ArrivalTime),
                 new SqlParameter("@Ticket1Quantity", flight.Ticket1Quantity ),
                 new SqlParameter("@Ticket2Quantity", flight.Ticket2Quantity),
-                new SqlParameter("@Ticket1BookedQuantity",flight.Ticket1BookedQuantity ),
-                new SqlParameter("@Ticket2BookedQuantity",flight.Ticket1BookedQuantity),
+                //new SqlParameter("@Ticket1BookedQuantity",flight.Ticket1BookedQuantity ),
+                //new SqlParameter("@Ticket2BookedQuantity",flight.Ticket2BookedQuantity),
                 new SqlParameter("@Ticket1Price", flight.Ticket1Price ),
                 new SqlParameter("@Ticket2Price", flight.Ticket2Price )
             };
